@@ -1,0 +1,146 @@
+.wrapper {
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  margin:20px;
+  border:3px solid #3F3F3F;
+  border-radius:0.8em;  
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f3f2f7;
+}
+
+/*------------------------------------------------ */
+
+.interface {
+  padding:1em;
+  background-color: #3F3F3F;
+  display:flex;
+  justify-content:start;
+  overflow: scroll;
+}
+
+.interface::-webkit-scrollbar {
+  display: none;
+}
+
+
+.user-input-1{
+  display:flex;
+  align-items: center;
+  padding:0.6em;
+  background-color:#535353;
+  box-sizing: border-box; 
+  border-radius: 4px;
+}
+.user-input-1 > label{
+  font-family:cloud;
+  color:white;
+  margin:0 20px 0 0;
+  font-weight:500;
+  font-size: 1.2em;
+}
+
+.user-input-1 > input{
+  outline:none;
+  padding:10px;
+  border:none;
+  border-radius: 2px;
+}
+
+.submit-button{
+  position: relative;
+  display:flex;
+  margin:0 0 0 auto;
+}
+
+@media only screen and (max-width: 800px){
+  .submit-button{
+    margin:0 0 0 50px;
+  }
+}
+
+.submit-button button{
+  position: relative;
+  padding:10px 30px;
+  font-size: 1.2em;
+  background-color:rgb(231, 66, 66);
+  border:none;
+  border-radius: 8px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.submit-button button:active{
+  transform: translate(0, 5px);
+  background-color:rgb(206, 60, 60);
+}
+
+.submit-button > div {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgb(128, 35, 35);
+  transform: translate(0, 5px);
+  border-radius: 8px;
+  z-index: 1;
+  transition: all 0.5s;
+
+}
+
+/* ================================================================= */
+.user-input-2{
+  display:flex;
+  align-items: center;
+  padding:0.6em;
+  background-color:#535353;
+  box-sizing: border-box; 
+  border-radius: 4px;
+  margin:0 0 0 20px;
+}
+.user-input-2 > label{
+  font-family:cloud;
+  color:white;
+  margin:0 20px 0 0;
+  font-weight:500;
+  font-size: 1.2em;
+}
+
+.user-input-2 > input{
+  outline:none;
+  padding:10px;
+  border:none;
+  border-radius: 2px;
+}
+
+/* ================================================================= */ 
+
+.game{
+  position: relative;
+  height:100%;
+  margin:10px;
+}
+
+.space-ship{
+  position:absolute;
+  top:100px;
+  left:100px;
+  transform: translate(0, 0);
+  width:8em;
+  height:8em;
+  overflow:hidden;
+  border-radius: 50%;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.308));
+  transition: all 1s ease-in-out;
+}
+
+.space-ship img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  pointer-events: none;
+}
