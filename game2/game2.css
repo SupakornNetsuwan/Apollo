@@ -1,4 +1,4 @@
-#game-1 .wrapper {
+#game-2 .wrapper {
   width: 100%;
   height: 100%;
   border: 3px solid #3F3F3F;
@@ -12,7 +12,7 @@
 
 /*------------------------------------------------ */
 
-#game-1 .interface {
+#game-2 .interface {
   padding: 1em;
   background-color: #3F3F3F;
   display: flex;
@@ -20,12 +20,12 @@
   overflow: scroll;
 }
 
-#game-1 .interface::-webkit-scrollbar {
+#game-2 .interface::-webkit-scrollbar {
   display: none;
 }
 
 
-#game-1 .user-input-1 {
+#game-2 .user-input-1 {
   display: flex;
   align-items: center;
   padding: 0.6em;
@@ -34,7 +34,7 @@
   border-radius: 4px;
 }
 
-#game-1 .user-input-1>label {
+#game-2 .user-input-1>label {
   font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
@@ -42,7 +42,7 @@
   font-size: 1em;
 }
 
-#game-1 .user-input-1>input {
+#game-2 .user-input-1>input {
   outline: none;
   height: 100%;
   padding: 10px;
@@ -53,19 +53,19 @@
   color: rgb(0, 255, 0);
 }
 
-#game-1 .submit-button {
+#game-2 .submit-button {
   position: relative;
   display: flex;
   margin: 0 0 0 auto;
 }
 
 @media only screen and (max-width: 800px) {
-  #game-1 .submit-button {
+  #game-2 .submit-button {
     margin: 0 0 0 50px;
   }
 }
 
-#game-1 .submit-button button {
+#game-2 .submit-button button {
   position: relative;
   padding: 10px 30px;
   font-size: 1.2em;
@@ -77,12 +77,12 @@
   transition: all 0.1s;
 }
 
-#game-1 .submit-button button:active {
+#game-2 .submit-button button:active {
   transform: translate(0, 5px);
   background-color: rgb(206, 60, 60);
 }
 
-#game-1 .submit-button>div {
+#game-2 .submit-button>div {
   position: absolute;
   top: 0;
   left: 0;
@@ -97,7 +97,7 @@
 }
 
 /* ================================================================= */
-#game-1 .user-input-2 {
+#game-2 .user-input-2 {
   display: flex;
   align-items: center;
   padding: 0.6em;
@@ -107,7 +107,7 @@
   margin: 0 0 0 20px;
 }
 
-#game-1 .user-input-2>label {
+#game-2 .user-input-2>label {
   font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
@@ -115,7 +115,7 @@
   font-size: 1em;
 }
 
-#game-1 .user-input-2>input {
+#game-2 .user-input-2>input {
   outline: none;
   height: 100%;
   padding: 10px;
@@ -128,7 +128,7 @@
 
 /* ================================================================= */
 
-#game-1 .user-input-3 {
+#game-2 .user-input-3 {
   display: flex;
   align-items: center;
   padding: 0.6em;
@@ -138,7 +138,7 @@
   margin: 0 0 0 20px;
 }
 
-#game-1 .user-input-3>label {
+#game-2 .user-input-3>label {
   font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
@@ -146,7 +146,7 @@
   font-size: 1em;
 }
 
-#game-1 .user-input-3>.fuel-bar {
+#game-2 .user-input-3>.fuel-bar {
   width: 120px;
   height: 100%;
   background-color: #424242;
@@ -154,22 +154,33 @@
   overflow: hidden;
 }
 
-#game-1 .fuel-bar > #current-fuel {
+#game-2 .fuel-bar > #current-fuel {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, rgba(12,145,12,1) 0%, rgba(41,238,41,1) 100%);
   transition: all 0.5s ease-in-out;
 }
 
-/* ================================================================= */
+/* ======================== Canvas ============================== */
 
-#game-1 .game {
-  position: relative;
+#game-2 .game {
   height: 100%;
-  margin: 10px;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  background:url("./space-game-bg.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: bottom center;
 }
 
-#game-1 .space-ship {
+#game-2 .game-canvas{
+  position: relative;  
+  height: 100%;
+  width: 1492px;
+
+}
+
+#game-2 .space-ship {
   position: absolute;
   top: 100px;
   left: 100px;
@@ -181,12 +192,24 @@
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.308));
   transition: all 1s ease-in-out;
   background-color: red;
-
 }
 
-#game-1 .space-ship img {
+#game-2 .space-ship img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+}
+
+#game-2 .victory-planet{
+  width:200px;
+  height:200px;
+  background-color:lightblue;
+  position: absolute;
+  bottom: 90px;
+  right: 90px;
+  z-index: 5;
+  border-radius: 50%;
+  line-height: 200px;
+  text-align: center;
 }
