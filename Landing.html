@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;500;600&family=Prompt:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;500;600&family=Prompt:wght@400;500&family=VT323&display=swap');
+    body{
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .landing-page{
+      background-color: #020411;
+      background-image: url('https://cdn.discordapp.com/attachments/440889636403937288/967466157537886338/star-dot.png');
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+    }
+    .landing-maininfo{
+      position: absolute;
+      height: 60%;
+      width: 55%;
+      background-color: rgba(255, 255, 255, .1);
+      transform: translateY(-50%);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      z-index: 2;
+    }
+    .landing-maininfo.design3{
+      box-shadow: 5px 5px 25px rgba(255, 255, 255, .5),
+      -5px -5px 25px rgba(255, 255, 255, .5);
+      top: 50%;
+    }
+    .landing-maininfo.design3.right{
+      left: 8%;
+    }
+    .landing-maininfo.design3.left{
+      right: 8%;
+    }
+    #landing-page3 .landing-maininfo.right{
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%)
+    }
+    #landing-page4 .landing-maininfo.right{
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%)
+    }
+    .landing-maininfo-right{
+      top: 50%;
+      right: 4%;
+      border-top: 2px solid rgba(255, 255, 255, .5);
+      border-left: 2px solid rgba(255, 255, 255, .5);
+    }
+    .landing-maininfo-left{
+      top: 50%;
+      left: 4%;
+      border-top: 2px solid rgba(255, 255, 255, .5);
+      border-right: 2px solid rgba(255, 255, 255, .5);
+    }
+    .landing-maininfo.newdesign{
+      border: 2px solid rgba(255, 255, 255, .5);;
+    }
+    .landing-content-container{
+      color: #fff;
+      position: relative;
+      height: 100%;
+    }
+    #landing-page1 .landing-content-container-page{
+      margin-right: 150px;
+      margin-left: 50px;
+    }
+    #landing-page2 .landing-content-container-page{
+      margin-right: 50px;
+      margin-left: 80px;
+    }
+    .newdesign .landing-content-container-page, .design3 .landing-content-container-page{
+      width: 85%;
+      margin: 0 auto;
+    }
+    .landing-content-container-page{
+      display: none;
+    }
+    .landing-content-container-page.active{
+      display: block;
+    }
+    .landing-content-container-page2 h1, .landing-content-container-page3 h1, .landing-content-container-page4 h1, .landing-content-container-page5 h1, .landing-content-container-page6 h1{
+      color: #E78021;
+    }
+    .landing-content-container-page2 .img1, .landing-content-container-page3 .img1, .landing-content-container-page4 .img1, .landing-content-container-page5 .img1, .landing-content-container-page6 .img1{
+      width: 65%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #DDEEF8;
+    }
+    .landing-content-container h1{
+      font-size: 2rem;
+    }
+    .line-container{
+      display: flex;
+    }
+    .line-container .line1{
+      border-radius: 15px;
+      margin-right: 5px;
+      background-color: #fff;
+      width: 200px;
+      height: 5px;
+    }
+    .line-container .line2{
+      border-radius: 15px;
+      margin-right: 5px;
+      background-color: #fff;
+      width: 60px;
+      height: 5px;
+    }
+    .line-container .line3{
+      border-radius: 15px;
+      margin-right: 5px;
+      background-color: #fff;
+      width: 20px;
+      height: 5px;
+    }
+    .landing-content-container h2{
+      font-size: .9rem;
+    }
+    .landing-secret{
+      margin-top: 40px;
+      font-family: 'VT323', monospace;
+    }
+    .landing-content-button{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 88%;
+      border-radius: 15px;
+      width: 60px;
+      background: #415A68;
+      padding: 6px;
+      z-index: 2;
+    }
+    .landing-content-button-right{
+      right: -5%;
+    }
+    .landing-content-button-left{
+      left: -5%;
+    }
+    .landing-content-button-top{
+      width: 100%;
+      background-color: #6A818D;
+      height: 70px;
+      border-radius: 10px;
+      margin-bottom: 10%;
+      display: flex;
+    }
+    #page3 .landing-content-button-top{
+      width: 7px;
+      height: 70px;
+    }
+    .landing-content-button-buttom{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: #6A818D;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: scroll;
+    }
+    .landing-design2-but .landing-content-button-buttom{
+      overflow: visible;
+    }
+    .landing-design2-but .landing-content-button-buttom{
+      justify-content: flex-end;
+    }
+    .landing-design2-but .landing-content-button-buttom.left{
+      justify-content: flex-start;
+    }
+    #landing-page3 .landing-content-button-buttom, #landing-page4 .landing-content-button-buttom{
+      flex-direction: row;
+
+    }
+    .landing-content-button-buttom::-webkit-scrollbar{
+      display: none;
+    }
+    .landing-content-button-buttom-info{
+      line-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 3px;
+      width: 40px;
+      height: 40px;
+      background-color: #DDEEF8;
+      border-radius: 8px;
+      font-size: .65rem;
+      color: #4E6876;
+      cursor: pointer;
+      border: 2px solid #26404E;
+      user-select: none;
+    }
+    .landing-design2-but .landing-content-button-buttom-info{
+      margin-top: 0;
+      margin-right: 3px;
+    }
+    .landing-content-button-buttom-info.active{
+      background-color: #26404E;
+      color: #DDEEF8;
+      border: 2px solid #DDEEF8;
+    }
+    .landing-content-button-buttom-info1{
+      margin-top: 5px;
+    }
+    #landing-page3 .landing-design2-but .landing-content-button-buttom-info4{
+      margin-top: 0;
+      margin-right: 5px;
+    }
+    .landing-design2-but .landing-content-button-buttom-info1{
+      margin-top: 0;
+      margin-left: 5px;
+    }
+    .landing-content-button-buttom-info i{
+      font-size: 1.2rem;
+      margin-top: .3rem;
+    }
+    .landing-content-button-top-info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .landing-content-button-top-info img{
+      width: 100%;
+      height: auto;
+    }
+    .landing-design2-butcon{
+      display: flex;
+      position: absolute;
+      top: 5%;
+      background-color: #415A68;
+      padding: 6px;
+      width: 500px;
+      height: 60px;
+      border-radius: 15px;
+      z-index: 2;
+    }
+    .landing-design2-butcon.right{
+      right: 10%;
+    }
+    .landing-design2-butcon.left{
+      left: 10%;
+    }
+    .landing-design2-but{
+      background-color: #6A818D;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+    .landing-design2-but-logo{
+      background-color: #6A818D;
+      margin-left: 6px;
+      width: 70px;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .landing-design2-but-logo.left{
+      margin-left: 0;
+      margin-right: 6px;
+    }
+    .landing-design2-but-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .landing-design2-but-logo img{
+      width: 100%;
+    }
+    .design3 .landing-butcon{
+      background-color: #6A818D;
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid #415A68;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .design3.right .landing-butcon{
+      right: 5%;
+    }
+    .design3.left .landing-butcon{
+      left: 5%;
+    }
+    .landing-butcon img{
+      width: 100%;
+    }
+    .landing-butcon .relative{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .design3 .landing-content-button-buttom-info{
+      position: absolute;
+    }
+    .design3.right .landing-content-button-buttom-info1{
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .design3.left .landing-content-button-buttom-info1{
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .design3.right .landing-content-button-buttom-info2{
+      top: -25%;
+      left: -30%;
+    }
+    .design3.left .landing-content-button-buttom-info2{
+      top: -25%;
+      right: -30%;
+    }
+    .design3.right .landing-content-button-buttom-info3{
+      top: 45%;
+      left: -60%;
+      transform: translateY(-50%);
+    }
+    .design3.left .landing-content-button-buttom-info3{
+      top: 45%;
+      right: -60%;
+      transform: translateY(-50%);
+    }
+    .design3.right .landing-content-button-buttom-info4{
+      top: 95%;
+      left: -30%;
+    }
+    .design3.left .landing-content-button-buttom-info4{
+      top: 95%;
+      right: -30%;
+    }
+    .design3.right .landing-content-button-buttom-info5{
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .design3.left .landing-content-button-buttom-info5{
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #landing #rocket {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+    #landing #rocket img {
+      --width: 20%;
+      position: absolute;
+      width: var(--width);
+      object-fit: contain;
+      transform: rotateZ(135deg);
+      left: 10%;
+    }
+    #landing .landing-container .img{
+      position: absolute;
+    }
+    #landing .earth1{
+      width: 10%;
+      top: 10%;
+      right: 8%;
+    }
+    #landing .sun1{
+      width: 30%;
+      top: -3%;
+      left: -1%;
+    }
+    #landing .orange1{
+      bottom: -2%;
+      right: 0;
+      width: 20%;
+    }
+    #landing .orange2{
+      width: 30%;
+      left: -10%;
+    }
+    #landing .green1{
+      width: 30%;
+      bottom: 12%;
+      left: -15%;
+    }
+    #landing .green2{
+      width: 40%;
+      bottom: 10%;
+      right: -5%;
+      z-index: 2;
+    }
+    #landing .purple1{
+      width: 25%;
+      top: 52%;
+      left: 47%;
+    }
+    #landing .purple2{
+      width: 35%;
+      bottom: 5%;
+      left: -10%;
+    }
+    #landing .red1{
+      width: 50%;
+      left: -5%;
+    }
+    #landing .starty1{
+      width: 5%;
+      bottom: 3%;
+      right: 1%;
+    }
+    #landing .starty2{
+      width: 8%;
+      top: 13%;
+      right: 15%;
+    }
+    #landing .starty3{
+      width: 5%;
+      bottom: 2%;
+      left: 10%;
+    }
+    #landing .starty4{
+      width: 7%;
+      bottom: 4%;
+      left: 40%;
+    }
+    #landing .startr1{
+      width: 10%;
+      bottom: 2%;
+      right: 1%;
+    }
+    #landing .startr2{
+      width: 10%;
+      top: 5%;
+      left: 20%;
+    }
+    
+    #landing .moon1{
+      width: 20%;
+      bottom: 3%;
+      right: 2%;
+    }
+    @media only screen and (max-width: 1440px){
+      .landing-content-container h1{
+        font-size: 1.35rem;
+      }
+      .landing-content-container h2{
+        font-size: .8rem;
+      }
+    }
+  </style>
+</head>
+
+<body onscroll="rotateRocket()" id="landing">
+  <div id="rocket">
+    <img id="rkImg" src="https://cdn.discordapp.com/attachments/872285420862459946/967418032152522802/unknown.png" alt="">
+  </div>
+  <div class="landing-container">
+    <section class="landing-page" id="landing-page1">
+      <img class="img earth1" src="https://cdn.discordapp.com/attachments/440889636403937288/967458496687771698/Earth.png" alt="">
+      <img class="img sun1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469670229745684/Sun.png" alt="">
+      <img class="img orange1" src="https://cdn.discordapp.com/attachments/440889636403937288/967461358310416524/orange.png" alt="">
+      <img class="img green1" src="https://cdn.discordapp.com/attachments/440889636403937288/967464431678292008/green.png" alt="">
+      <div class="landing-maininfo landing-maininfo-right">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo program คืออะไร?</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>โครงการอพอลโล เป็นโครงการที่ต่อเนื่องมาจากเมอร์คิวรีและเจมินี มีเป้าหมายสำคัญคือ จะนำมนุษย์ลงไปสำรวจดวงจันทร์ โดยใช้นักบินอวกาศขึ้นไปครั้งละ 3 คน
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>1. lift off (S-IC)</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ขั้นตอนที่หนึ่ง - เครื่องยนต์เผาผลาญเชื้อเพลิงน้ำมันเพื่อให้ลอยสู่กลางอากาศ
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966317233640980540/unknown.png" alt="">
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>2. Second stage (S-II)</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ขั้นตอนที่สอง - ปล่อยเครื่องยนต์ส่วนแรกออกเพื่อส่ง Apollo ผ่านขึ้นไปเหนือชั้นบรรยากาศ
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966322040195911680/unknown.png" alt="">
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>3. Beyond Earth (S-IVB)</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ขั้นตอนที่สาม - ขับยานอวกาศออกจากโลกไปยังดวงจันทร์
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966973794281455656/unknown.png" alt="">
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page5">
+            <h1>4. Apollo</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>นักบินอวกาศทั้งสามนั่งในห้องบังคับการ ซึ่งประกอบด้วยเครื่องยนต์ ถังเชื้อเพลิง และเซลล์เชื้อเพลิง
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966978740410286090/unknown.png" alt="">
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page6">
+            <h1>5.The Lunar Module</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ยานสำหรับลงจอดบนดวงจันทร์ติดกับ Apollo
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966980163738943518/unknown.png" alt="">
+          </div>
+
+        </div>
+        <div class="landing-content-button landing-content-button-right">
+          <div class="landing-content-button-top">
+            <div class="landing-content-button-top-info">
+              <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+            </div>
+          </div>
+
+          <div class="landing-content-button-buttom">
+            <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_1</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_2</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_3</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_4</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info5">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_5</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info6">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="landing-page" id="landing-page2">
+      <img class="img purple1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469826501115924/purple.png" alt="">
+      <div class="landing-maininfo landing-maininfo-left">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo 1</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>วันที่ 27 มกราคม 1967 เป็นภารกิจแรกของโครงการอพอลโล โดยมีโรเจอร์ บี, แชฟฟี เอ็ด ไวต์ และกัส กริซซัม เป็นลูกเรือในการทดสอบการโคจรรอบโลก แต่ไม่สำเร็จเนื่องจาก ภายในยานมีวัสดุในยานเป็นวัตถุไวไฟจำนวนมาก และมีการใช้เพียวออกซิเจนในยาน ทำให้ในช่วงการทดสอบแบบเสมือนจริง เกิดเหตุเพลิงไหม้และเปลวเพลิงได้ปกคลุมไปทั่วยานทำให้ลูกเรือทั้ง 3 คนเสียชีวิต
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>กลิ่นเปรี้ยวในยาน</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ในวันทดสอบพลังงานภายในยานเมื่อเข้าไปในยานแล้วเชื่อมต่อกับหัวจ่ายออกซิเจน พบว่ามีกลิ่นแปลกๆเกิดขึ้นจนต้องเก็บตัวอย่างไปตรวจสอบแต่ก็ไม่พบที่มาของกลิ่น หลังจากหารือกันก็ตัดสินใจทดสอบต่อไป
+            </h2>
+            <!-- <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966317233640980540/unknown.png" alt=""> -->
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>การสื่อสารที่ผิดพลาดในยาน</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ในตอนแรกของการทดสอบพลังงานภายในยานมีระบบสื่อสารที่มีปัญหาเกิดขึ้นระหว่างผู้บังคับบัญชากริสซัมและห้องควบคุม
+            </h2>
+            <!-- <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966322040195911680/unknown.png" alt=""> -->
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>การกู้ภัยลูกเรือจากเหตุเพลิงไหม้</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ในแผนการกู้ภัยฉุกเฉินที่ทางnasaวางไว้ พวกเขาต้องใช้เวลาทั้งสิ้น 90 วินาทีในการกู้ภัย
+              แต่ในการปฏิบัติจริงๆพวกเขาต้องใช้เวลาถึง 5 นาทีด้วยกัน และทีมกู้ภัยทีมดับเพลิงก็ต้องใช้เวลาเดินทางมาถึงฐานปล่อยถึง 8 นาทีด้วยกัน
+            </h2>
+            <!-- <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966973794281455656/unknown.png" alt=""> -->
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page5">
+            <h1>4. Apollo</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>นักบินอวกาศทั้งสามนั่งในห้องบังคับการ ซึ่งประกอบด้วยเครื่องยนต์ ถังเชื้อเพลิง และเซลล์เชื้อเพลิง
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966978740410286090/unknown.png" alt="">
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page6">
+            <h1>5.The Lunar Module</h1>
+            <div class="line-container">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <h2>ยานสำหรับลงจอดบนดวงจันทร์ติดกับ Apollo
+            </h2>
+            <img class="img1" src="https://cdn.discordapp.com/attachments/871763361719808060/966980163738943518/unknown.png" alt="">
+          </div>
+
+        </div>
+        <div class="landing-content-button landing-content-button-left">
+          <div class="landing-content-button-top">
+            <div class="landing-content-button-top-info">
+              <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+            </div>
+          </div>
+
+          <div class="landing-content-button-buttom">
+            <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_1</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_2</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_3</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_4</p>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
+    <section class="landing-page" id="landing-page3">
+      <img class="img orange2" src="https://cdn.discordapp.com/attachments/440889636403937288/967461358310416524/orange.png" alt="">
+      <img class="img green2" src="https://cdn.discordapp.com/attachments/440889636403937288/967464431678292008/green.png" alt="">
+      <div class="landing-maininfo right newdesign">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo 7</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ในวันที่ 11 ตุลาคม 1968 วอลลี เชียร์รา, ดอน ฟูลตัน ไอเซล และ อาร์ วอลเตอร์ คันนิงแฮม เป็นลูกเรืออพอลโลกลุ่มแรกที่เข้าสู่อวกาศไปโคจรรอบโลก เพื่อแสดงให้เห็นว่า ระบบขับเคลื่อน และการควบคุมต่างๆ นั้นสามารถใช้งานได้และเชื่อถือได้สำหรับการทำภารกิจบนดวงจันทร์ และกลับถึงโลกอย่างปลอดภัยในวันที่ 22 ตุลาคม 1968 ใช้เวลาทั้งสิ้น 11 วัน ในวงโคจรของโลก
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>ลงจอดที่แตกต่าง </h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>อพอลโล่  7(ลงที่เดียวกันกับ 9 ) ได้ลงจอดที่มหาสมุทรฝั่งแอสแลนติกใกล้สามเหลี่ยมเมอร์บิวดาร์ ซึ่งอพอลโล่ 4, 5 และ 6 จะลงมหาสมุทรแปซิฟิก 13 11 8 9(North Atlantic Ocean) 10 12(?) 14(Samoa near pacific) 15 16 17
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>หวัดธรรมดาที่ไม่ธรรมดา</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>มีรายงานลูกเรือบนยานมีอาการป่วยเป็นไข้หวัดในอวกาศ ซึ่งกลายเป็นเรื่องร้ายแรงเนื่องจากเมือกสะสมในช่องจมูกและไม่ระบายออกได้ อีกทั้งการพยายามเป่าทิชชู่อย่างแรง จึงส่งผลให้แก้วหูเจ็บปวดอย่างหนัก
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>ไม่ไหวต้องขอขัด(คำสั่ง)</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ระหว่างที่กลับโลก เนื่องจากที่นักบินอวกาศมีปัญหาเรื่องมีน้ำมูก พวกเขาจึงตัดสินใจที่จะถอดหมวกนักบินอวกาศ นาซาไม่อนุญาตเพราะอาจจะได้รับบาดเจ็บระหว่างการลงจอด แต่เหล่านักบินตัดสินใจที่จะขัดขืนคำสั่ง แต่โชคดีที่ไม่มีใครคอหักระหว่างลงจอด
+            </h2>
+          </div>
+
+        </div>
+      </div>
+      <div class="landing-design2-butcon right">
+        <div class="landing-design2-but">
+          <div class="landing-content-button-buttom">
+            <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_1</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_2</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_3</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_4</p>
+            </div>
+          </div>
+        </div>
+        <div class="landing-design2-but-logo">
+          <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="landing-page" id="landing-page4">
+      <img class="img red1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469888140636200/red.png" alt="">
+      <img class="img starty1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469702131621928/Wink1.png" alt="">
+      <img class="img startr1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469722729873458/Wink2.png" alt="">
+      <div class="landing-maininfo right newdesign">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo 11</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ในวันที่ 20 กรกฎาคม 1969 อพอลโล 11 เป็นยานอวกาศลำแรกที่ลงจอดบนผิวของดวงจันทร์สำเร็จ ลูกเรือในยานอวกาศประกอบด้วยนีล อาร์มสตรอง ผู้บังคับการ, เอดวิน อัลดริน และไมเคิล คอลลินส์ อาร์มสตรองเป็นมนุษย์คนแรกที่ลงมาประทับรอยเท้าบนดวงจันทร์ ตามมาด้วยอัลดริน นักบินอวกาศทั้งสองได้ติดตั้งเครื่องวัดแผ่นดินไหว กระจกเลเซอร์เครื่องวัด "ลมสุริยะ" และเก็บตัวอย่างหินและดิน 20.8 กิโลกรัม นำกลับมายังโลก
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>อพอลโล 11 บนดวงจันทร์นานแค่ไหน</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>โมดูลดวงจันทร์ Apollo 11 อยู่บนดวงจันทร์นานกว่า 21 ชั่วโมง
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>รอยเท้าบนดวงจันทร์</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ความเหนียวแน่นของดินบนดวงจันทร์แสดงให้เห็นในเชิงคุณภาพในรอยพิมพ์รองเท้าบู๊ตที่ชัดเจนซึ่งทิ้งไว้บนดวงจันทร์โดยนักบินอวกาศชาวอเมริกัน เอ็ดวิน อัลดริน ระหว่างภารกิจอะพอลโล 11 ในเดือนกรกฎาคม พ.ศ. 2512 อัลดรินถ่ายภาพพิมพ์ดังกล่าวเป็นส่วนหนึ่งของการศึกษาธรรมชาติของดินและพฤติกรรมการบดอัดของดิน ภาพนี้ได้กลายเป็นสัญลักษณ์ของการมาเยือนโลกอื่นครั้งแรกของมนุษย์
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>ภารกิจได้เกือบจบลงด้วยโศกนาฏกรรม</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ภารกิจอะพอลโล 11 เกือบจบลงด้วยโศกนาฏกรรม เพราะลูกเรือคนหนึ่งเผลอทำให้เบรกเกอร์ในยานลูนาร์โมดูลแตกเสียหาย ซึ่งหากเบรกเกอร์ตัวนี้ไม่ทำงาน ยานก็จะกลับขึ้นไปหายานบริการไม่ได้ นักบินก็จะต้องติดอยู่บนดวงจันทร์ แต่ปัญหานี้ได้รับการแก้ไขโดยนีล อาร์มสตรอง ที่ใช้ปากกาเสียบเข้าไปในเบรกเกอร์แทน
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page5">
+            <h1>เมื่อถึงดวงจันทร์ต้องหลับในยาน 5 ชั่วโมง</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2> เมื่อยานลูนาร์โมดูลลงจอดบนดวงจันทร์ ตามตารางของภารกิจ นักบินทั้งสองคนคือ นีล อาร์มสตรอง และ บัซ อัลดริน ต้องหลับในยานเป็นเวลา 5 ชั่วโมงก่อนจึงค่อยออกจากยาน แต่ทั้งสองตื่นเต้นเกินจนไม่สามารถหลับลง จึงขออนุญาตศูนย์ควบคุมภารกิจว่าขอออกมาก่อน ซึ่งก็ได้รับอนุญาต นีล อาร์มสตรอง จึงได้ออกจากยานเร็วกว่ากำหนด 5 ชั่วโมง
+            </h2>
+          </div>
+
+        </div>
+      </div>
+      <div class="landing-design2-butcon left">
+        <div class="landing-design2-but-logo left">
+          <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+        </div>
+        <div class="landing-design2-but">
+          <div class="landing-content-button-buttom left">
+            <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1 left">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_1</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+              <i class='bx bxs-file-blank'></i>
+              <p>File_2</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_3</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_4</p>
+            </div>
+            <div class="landing-content-button-buttom-info landing-content-button-buttom-info5">
+              <i class='bx bxs-file-blank' ></i>
+              <p>File_5</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="landing-page design3 right" id="landing-page5">
+      <img class="img purple2" src="https://cdn.discordapp.com/attachments/440889636403937288/967469826501115924/purple.png" alt="">
+      <img class="img starty2" src="https://cdn.discordapp.com/attachments/440889636403937288/967469702131621928/Wink1.png" alt="">
+      <div class="landing-maininfo right design3">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo 13</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ในวันที่ 11 เมษายน 1970 อพอลโล 13 ออกเดินทางมุ่งหน้าสู่ดวงจันทร์ แต่มันกลับจบลงด้วยอุบัติเหตุที่เกือบพรากชีวิตนักบินอวกาศทั้ง 3 ไป  ลูกเรือในยานอวกาศประกอบด้วย เจมส์ โลเวลล์, จอห์น สไวเกิร์ต และ เฟรด ไฮส์. หลังจากปล่อยยานไปได้ราว 55 ชั่วโมง ในห้องควบคุมบนโลกได้พบว่ามีสัญญาณเตือนความดันต่ำในถังไฮโดรเจนของยาน หลังจากที่ถังออกซิเจนเกิดระเบิดขึ้นมานั้น อพอลโล 13 อยู่ไกลกว่าโลกเกินที่จะหันหัวกลับ พวกเขาต้องใช้วิธีคือการใช้แรงดึงดูดของดวงจันทร์เหวี่ยงยานกลับสู่โลก อพอลโล 13 กลับโลกอย่างปลอดภัย เมื่อวันที่ 17 เมษายน 1970 ปิดฉากภารกิจกู้ภัยอันยิ่งใหญ่นี้ลงอย่างสวยงาม
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>เรื่องราวที่หลายคนอาจไม่ค่อยรู้</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>เมื่อกลับมาถึงโลกแล้วนั้น Fred Haise นักบินยานลงดวงจันทร์ ติดเชื้อในกระเพาะปัสสาวะของเขา
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>อุปสรรคอย่างแรก</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>พวกเขาจะต้องเปิดระบบบนยานควบคุมขึ้นมาใหม่ก่อนจะกลับถึงโลก ซึ่งเป็นสิ่งที่ไม่เคยถูกทดสอบมาก่อนระหว่างภารกิจ และก็ไม่มีใครสามารถรับประกันว่าจะสำเร็จหรือไม่อีกด้วย
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>ความผิดพลาดที่ไม่ใช่ตัวเลือก</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>หลังจากแยกตัวออกจากยานบริการ นี่เป็นครั้งแรกที่ลูกเรือได้เห็นความเสียหายที่เกิดขึ้นกับยานแบบจัง ๆ โดยแผงด้านข้างทั้งแผงได้ระเบิดออกมาเลย ซึ่งทำให้เกิดความกังวลขึ้นมาว่าแผ่นกันความร้อนของยานอาจมีความเสียหายเกิดขึ้น
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page5">
+            <h1>ระบบช่วยชีวิตเบื้องต้น</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>เนื่องจากคาร์บอนไดออกไซต์ในยานมีมากเกินไป เหล่านักบินบนอวกาศและนักวิทยาศาสตร์บนโลกจึงช่วยกันคิดค้นและประดิษฐ์เครื่องฟอกคาร์บอนไดออกไซด์ด้วยสิ่งของในยานที่มีจำกัดระหว่างที่ติดอยู่ในอวกาศ
+            </h2>
+          </div>
+
+        </div>
+      </div>
+      <div class="landing-butcon">
+        <!-- <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt=""> -->
+        <div class="relative">
+          <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+          <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1 left">
+            <i class='bx bxs-file-blank'></i>
+            <p>File_1</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+            <i class='bx bxs-file-blank'></i>
+            <p>File_2</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_3</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_4</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info5">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="landing-page design3 left" id="landing-page6">
+      <img class="img startr2" src="https://cdn.discordapp.com/attachments/440889636403937288/967469722729873458/Wink2.png" alt="">
+      <img class="img moon1" src="https://cdn.discordapp.com/attachments/440889636403937288/967469910248800366/moon1.png" alt="">
+      <img class="img starty3" src="https://cdn.discordapp.com/attachments/440889636403937288/967469702131621928/Wink1.png" alt="">
+      <img class="img starty4" src="https://cdn.discordapp.com/attachments/440889636403937288/967469702131621928/Wink1.png" alt="">
+      <div class="landing-maininfo left design3">
+        <div class="landing-content-container">
+          <div class="landing-content-container-page landing-content-container-page1 active">
+            <h1>Apollo 17</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>วันที่ 7 ธันวาคม 1972 ยานอพอลโล 17 ภารกิจสุดท้ายของโครงการอะพอลโลซึ่งเป็นเวลาล่าสุดที่มนุษย์ได้เหยียบดวงจันทร์ ผู้บัญชาการ ยูจีน เคอร์แนน และ แฮร์ริสัน ชมิทท์ เดินบนดวงจันทร์ ในขณะที่นักบิน โรนัลด์ เอ็ม. อีแวนส์ โคจรรอบด้านบนดวงจันทร์ แฮร์ริสัน ชมิทท์ เป็นนักธรณีวิทยามืออาชีพเพียงคนเดียวที่ลงจอดบนดวงจันทร์ ภารกิจนี้เน้นหนักในด้านวิทยาศาสตร์ และ ภารกิจดังกล่าวได้ทำลายสถิตินักบินอวกาศหลายรายการรวมถึงภารกิจลงจอดบนดวงจันทร์ที่ยาวที่สุด (12 วัน 14 ชั่วโมง) และนั่นคือครั้งสุดท้ายที่มนุษยชาติได้สัมผัสกับดวงจันทร์
+            </h2>
+            <div class="landing-secret">
+              <p>
+                - Secret File 11
+              </p>
+              <p>- MUSPELHEIM - code - AB24FF7A2</p>
+            </div>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page2">
+            <h1>ภาพที่มีชื่อเสียงของโลก</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ในขณะที่ยานอะพอลโล 17 เดินทางไปดวงจันทร์นักบินอวกาศได้ถ่ายภาพโลกที่มีชื่อเสียงชื่อภาพว่า The Blue Marble โลกสีฟ้าท่ามกลางความมืดมิดของอวกาศในหนังสือวิทยาศาสตร์
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page3">
+            <h1>ยูจีน เคอร์แนน ทิ้งบางอย่างไว้บนดวงจันทร์</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>ก่อนเดินทางขึ้นจากดวงจันทร์ยูจีน เคอร์แนนได้เขียนชื่อลูกสาวตัวเองเป็นอักษรย่อ
+
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page4">
+            <h1>ตัวไว้บนผิวดวงจันทร์</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>นอกจากนี้ยังทิ้งแผ่นป้ายจารึกข้อความว่า “สถานที่นี้มนุษยชาติได้เดินทางมาสำรวจดวงจันทร์ในเดือนธันวาคม 1972 ขอให้จิตวิญญาณแห่งสันติสุขได้เกิดขึ้นกับมนุษยชาติทั้งมวล ” ไว้บนผิวดวงจันทร์
+            </h2>
+          </div>
+
+          <div class="landing-content-container-page landing-content-container-page5">
+            <h1>ความรู้ใหม่ของมวลมนุษยชาติ</h1>
+            <div class="line-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <h2>อะพอลโล 17 เก็บก้อนหินตัวอย่างจากดวงจันทร์หนัก 110 กิโลกรัม และ ถ่ายภาพมากกว่า 2,400 รูประหว่างการทำภารกิจ
+            </h2>
+          </div>
+
+        </div>
+      </div>
+      <div class="landing-butcon">
+        <!-- <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt=""> -->
+        <div class="relative">
+          <img src="https://cdn.discordapp.com/attachments/900936803484315659/967089882591821874/0e2a2d53951f3b42.png" alt="">
+          <div class="landing-content-button-buttom-info active landing-content-button-buttom-info1 left">
+            <i class='bx bxs-file-blank'></i>
+            <p>File_1</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info2">
+            <i class='bx bxs-file-blank'></i>
+            <p>File_2</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info3">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_3</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info4">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_4</p>
+          </div>
+          <div class="landing-content-button-buttom-info landing-content-button-buttom-info5">
+            <i class='bx bxs-file-blank' ></i>
+            <p>File_5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </div>
+  </div>
+  <script>
+    const rocket = document.getElementById("rkImg")
+    function rotateRocket() {
+      let winScreen = 101.9771071800208 * window.innerHeight / 100
+      console.log(window.innerHeight)
+      let value = document.documentElement.scrollTop
+      let section = Math.floor(value / winScreen)
+      let scroll = (value % winScreen) / winScreen
+      let move = scroll * 60
+      let rotate = scroll * 90
+      if (section % 2 == 0) {
+        rocket.style.left = `calc(10% + ${move}%)`
+        rocket.style.transform = `rotateZ(calc(135deg + ${rotate}deg))`
+      } else {
+        rocket.style.left = `calc(70% - ${move}%)`
+        rocket.style.transform = `rotateZ(calc(225deg - ${rotate}deg))`
+      }
+    }
+    let allbutpage1 = document.querySelector("#landing-page1").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage1 = document.querySelector("#landing-page1").querySelectorAll(".landing-content-container-page")
+    allbutpage2 = document.querySelector("#landing-page2").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage2 = document.querySelector("#landing-page2").querySelectorAll(".landing-content-container-page")
+    allbutpage3 = document.querySelector("#landing-page3").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage3 = document.querySelector("#landing-page3").querySelectorAll(".landing-content-container-page")
+    allbutpage4 = document.querySelector("#landing-page4").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage4 = document.querySelector("#landing-page4").querySelectorAll(".landing-content-container-page")
+    allbutpage5 = document.querySelector("#landing-page5").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage5 = document.querySelector("#landing-page5").querySelectorAll(".landing-content-container-page")
+    allbutpage6 = document.querySelector("#landing-page6").querySelectorAll(".landing-content-button-buttom-info")
+    allconpage6 = document.querySelector("#landing-page6").querySelectorAll(".landing-content-container-page")
+    page1_but1 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info1")
+    page1_but2 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info2")
+    page1_but3 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info3")
+    page1_but4 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info4")
+    page1_but5 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info5")
+    page1_but6 = document.querySelector("#landing-page1").querySelector(".landing-content-button-buttom-info6")
+    page1_con1 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page1")
+    page1_con2 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page2")
+    page1_con3 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page3")
+    page1_con4 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page4")
+    page1_con5 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page5")
+    page1_con6 = document.querySelector("#landing-page1").querySelector(".landing-content-container-page6")
+    page2_but1 = document.querySelector("#landing-page2").querySelector(".landing-content-button-buttom-info1")
+    page2_but2 = document.querySelector("#landing-page2").querySelector(".landing-content-button-buttom-info2")
+    page2_but3 = document.querySelector("#landing-page2").querySelector(".landing-content-button-buttom-info3")
+    page2_but4 = document.querySelector("#landing-page2").querySelector(".landing-content-button-buttom-info4")
+    page2_con1 = document.querySelector("#landing-page2").querySelector(".landing-content-container-page1")
+    page2_con2 = document.querySelector("#landing-page2").querySelector(".landing-content-container-page2")
+    page2_con3 = document.querySelector("#landing-page2").querySelector(".landing-content-container-page3")
+    page2_con4 = document.querySelector("#landing-page2").querySelector(".landing-content-container-page4")
+    page3_but1 = document.querySelector("#landing-page3").querySelector(".landing-content-button-buttom-info1")
+    page3_but2 = document.querySelector("#landing-page3").querySelector(".landing-content-button-buttom-info2")
+    page3_but3 = document.querySelector("#landing-page3").querySelector(".landing-content-button-buttom-info3")
+    page3_but4 = document.querySelector("#landing-page3").querySelector(".landing-content-button-buttom-info4")
+    page3_con1 = document.querySelector("#landing-page3").querySelector(".landing-content-container-page1")
+    page3_con2 = document.querySelector("#landing-page3").querySelector(".landing-content-container-page2")
+    page3_con3 = document.querySelector("#landing-page3").querySelector(".landing-content-container-page3")
+    page3_con4 = document.querySelector("#landing-page3").querySelector(".landing-content-container-page4")
+    page4_but1 = document.querySelector("#landing-page4").querySelector(".landing-content-button-buttom-info1")
+    page4_but2 = document.querySelector("#landing-page4").querySelector(".landing-content-button-buttom-info2")
+    page4_but3 = document.querySelector("#landing-page4").querySelector(".landing-content-button-buttom-info3")
+    page4_but4 = document.querySelector("#landing-page4").querySelector(".landing-content-button-buttom-info4")
+    page4_but5 = document.querySelector("#landing-page4").querySelector(".landing-content-button-buttom-info5")
+    page4_con1 = document.querySelector("#landing-page4").querySelector(".landing-content-container-page1")
+    page4_con2 = document.querySelector("#landing-page4").querySelector(".landing-content-container-page2")
+    page4_con3 = document.querySelector("#landing-page4").querySelector(".landing-content-container-page3")
+    page4_con4 = document.querySelector("#landing-page4").querySelector(".landing-content-container-page4")
+    page4_con5 = document.querySelector("#landing-page4").querySelector(".landing-content-container-page5")
+    page5_but1 = document.querySelector("#landing-page5").querySelector(".landing-content-button-buttom-info1")
+    page5_but2 = document.querySelector("#landing-page5").querySelector(".landing-content-button-buttom-info2")
+    page5_but3 = document.querySelector("#landing-page5").querySelector(".landing-content-button-buttom-info3")
+    page5_but4 = document.querySelector("#landing-page5").querySelector(".landing-content-button-buttom-info4")
+    page5_but5 = document.querySelector("#landing-page5").querySelector(".landing-content-button-buttom-info5")
+    page5_con1 = document.querySelector("#landing-page5").querySelector(".landing-content-container-page1")
+    page5_con2 = document.querySelector("#landing-page5").querySelector(".landing-content-container-page2")
+    page5_con3 = document.querySelector("#landing-page5").querySelector(".landing-content-container-page3")
+    page5_con4 = document.querySelector("#landing-page5").querySelector(".landing-content-container-page4")
+    page5_con5 = document.querySelector("#landing-page5").querySelector(".landing-content-container-page5")
+    page6_but1 = document.querySelector("#landing-page6").querySelector(".landing-content-button-buttom-info1")
+    page6_but2 = document.querySelector("#landing-page6").querySelector(".landing-content-button-buttom-info2")
+    page6_but3 = document.querySelector("#landing-page6").querySelector(".landing-content-button-buttom-info3")
+    page6_but4 = document.querySelector("#landing-page6").querySelector(".landing-content-button-buttom-info4")
+    page6_but5 = document.querySelector("#landing-page6").querySelector(".landing-content-button-buttom-info5")
+    page6_con1 = document.querySelector("#landing-page6").querySelector(".landing-content-container-page1")
+    page6_con2 = document.querySelector("#landing-page6").querySelector(".landing-content-container-page2")
+    page6_con3 = document.querySelector("#landing-page6").querySelector(".landing-content-container-page3")
+    page6_con4 = document.querySelector("#landing-page6").querySelector(".landing-content-container-page4")
+    page6_con5 = document.querySelector("#landing-page6").querySelector(".landing-content-container-page5")
+    page1_but1.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con1.classList.add('active')
+      page1_but1.classList.add('active')
+    })
+    page1_but2.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      page1_but2.classList.add('active')
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con2.classList.add('active')
+    })
+    page1_but3.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      page1_but3.classList.add('active')
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con3.classList.add('active')
+    })
+    page1_but4.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      page1_but4.classList.add('active')
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con4.classList.add('active')
+    })
+    page1_but5.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      page1_but5.classList.add('active')
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con5.classList.add('active')
+    })
+    page1_but6.addEventListener("click", ()=>{
+      allbutpage1.forEach(but => but.classList.remove("active"))
+      page1_but6.classList.add('active')
+      allconpage1.forEach(con => con.classList.remove("active"))
+      page1_con6.classList.add('active')
+    })
+    ////////////////////////////////////////////////////////////
+    page2_but1.addEventListener("click", ()=>{
+      allbutpage2.forEach(but => but.classList.remove("active"))
+      allconpage2.forEach(con => con.classList.remove("active"))
+      page2_con1.classList.add('active')
+      page2_but1.classList.add('active')
+    })
+    page2_but2.addEventListener("click", ()=>{
+      allbutpage2.forEach(but => but.classList.remove("active"))
+      page2_but2.classList.add('active')
+      allconpage2.forEach(con => con.classList.remove("active"))
+      page2_con2.classList.add('active')
+    })
+    page2_but3.addEventListener("click", ()=>{
+      allbutpage2.forEach(but => but.classList.remove("active"))
+      page2_but3.classList.add('active')
+      allconpage2.forEach(con => con.classList.remove("active"))
+      page2_con3.classList.add('active')
+    })
+    page2_but4.addEventListener("click", ()=>{
+      allbutpage2.forEach(but => but.classList.remove("active"))
+      page2_but4.classList.add('active')
+      allconpage2.forEach(con => con.classList.remove("active"))
+      page2_con4.classList.add('active')
+    })
+    ////////////////////////////////
+    page3_but1.addEventListener("click", ()=>{
+      allbutpage3.forEach(but => but.classList.remove("active"))
+      allconpage3.forEach(con => con.classList.remove("active"))
+      page3_con1.classList.add('active')
+      page3_but1.classList.add('active')
+    })
+    page3_but2.addEventListener("click", ()=>{
+      allbutpage3.forEach(but => but.classList.remove("active"))
+      page3_but2.classList.add('active')
+      allconpage3.forEach(con => con.classList.remove("active"))
+      page3_con2.classList.add('active')
+    })
+    page3_but3.addEventListener("click", ()=>{
+      allbutpage3.forEach(but => but.classList.remove("active"))
+      allconpage3.forEach(con => con.classList.remove("active"))
+      page3_con3.classList.add('active')
+      page3_but3.classList.add('active')
+    })
+    page3_but4.addEventListener("click", ()=>{
+      allbutpage3.forEach(but => but.classList.remove("active"))
+      page3_but4.classList.add('active')
+      allconpage3.forEach(con => con.classList.remove("active"))
+      page3_con4.classList.add('active')
+    })
+    ////////////////////////////////
+    page4_but1.addEventListener("click", ()=>{
+      allbutpage4.forEach(but => but.classList.remove("active"))
+      allconpage4.forEach(con => con.classList.remove("active"))
+      page4_con1.classList.add('active')
+      page4_but1.classList.add('active')
+    })
+    page4_but2.addEventListener("click", ()=>{
+      allbutpage4.forEach(but => but.classList.remove("active"))
+      page4_but2.classList.add('active')
+      allconpage4.forEach(con => con.classList.remove("active"))
+      page4_con2.classList.add('active')
+    })
+    page4_but3.addEventListener("click", ()=>{
+      allbutpage4.forEach(but => but.classList.remove("active"))
+      allconpage4.forEach(con => con.classList.remove("active"))
+      page4_con3.classList.add('active')
+      page4_but3.classList.add('active')
+    })
+    page4_but4.addEventListener("click", ()=>{
+      allbutpage4.forEach(but => but.classList.remove("active"))
+      page4_but4.classList.add('active')
+      allconpage4.forEach(con => con.classList.remove("active"))
+      page4_con4.classList.add('active')
+    })
+    page4_but5.addEventListener("click", ()=>{
+      allbutpage4.forEach(but => but.classList.remove("active"))
+      page4_but5.classList.add('active')
+      allconpage4.forEach(con => con.classList.remove("active"))
+      page4_con5.classList.add('active')
+    })
+    ////////////////////////////////
+    page5_but1.addEventListener("click", ()=>{
+      allbutpage5.forEach(but => but.classList.remove("active"))
+      allconpage5.forEach(con => con.classList.remove("active"))
+      page5_con1.classList.add('active')
+      page5_but1.classList.add('active')
+    })
+    page5_but2.addEventListener("click", ()=>{
+      allbutpage5.forEach(but => but.classList.remove("active"))
+      page5_but2.classList.add('active')
+      allconpage5.forEach(con => con.classList.remove("active"))
+      page5_con2.classList.add('active')
+    })
+    page5_but3.addEventListener("click", ()=>{
+      allbutpage5.forEach(but => but.classList.remove("active"))
+      allconpage5.forEach(con => con.classList.remove("active"))
+      page5_con3.classList.add('active')
+      page5_but3.classList.add('active')
+    })
+    page5_but4.addEventListener("click", ()=>{
+      allbutpage5.forEach(but => but.classList.remove("active"))
+      page5_but4.classList.add('active')
+      allconpage5.forEach(con => con.classList.remove("active"))
+      page5_con4.classList.add('active')
+    })
+    page5_but5.addEventListener("click", ()=>{
+      allbutpage5.forEach(but => but.classList.remove("active"))
+      page5_but5.classList.add('active')
+      allconpage5.forEach(con => con.classList.remove("active"))
+      page5_con5.classList.add('active')
+    })
+    ////////////////////////////////
+    page6_but1.addEventListener("click", ()=>{
+      allbutpage6.forEach(but => but.classList.remove("active"))
+      allconpage6.forEach(con => con.classList.remove("active"))
+      page6_con1.classList.add('active')
+      page6_but1.classList.add('active')
+    })
+    page6_but2.addEventListener("click", ()=>{
+      allbutpage6.forEach(but => but.classList.remove("active"))
+      page6_but2.classList.add('active')
+      allconpage6.forEach(con => con.classList.remove("active"))
+      page6_con2.classList.add('active')
+    })
+    page6_but3.addEventListener("click", ()=>{
+      allbutpage6.forEach(but => but.classList.remove("active"))
+      allconpage6.forEach(con => con.classList.remove("active"))
+      page6_con3.classList.add('active')
+      page6_but3.classList.add('active')
+    })
+    page6_but4.addEventListener("click", ()=>{
+      allbutpage6.forEach(but => but.classList.remove("active"))
+      page6_but4.classList.add('active')
+      allconpage6.forEach(con => con.classList.remove("active"))
+      page6_con4.classList.add('active')
+    })
+    page6_but5.addEventListener("click", ()=>{
+      allbutpage6.forEach(but => but.classList.remove("active"))
+      page6_but5.classList.add('active')
+      allconpage6.forEach(con => con.classList.remove("active"))
+      page6_con5.classList.add('active')
+    })
+  </script>
+</body>
+
+</html>
