@@ -11,101 +11,74 @@
   <body>
     <game>
       <div class="game-wrapper">
-        <div class="game-screen">
-          <div class="game-name">
-            <p>TERNINAL CONTROLLER -1.02.4</p>
-          </div>
-          <div class="every-game">
-            <div id="off-screen toggle"></div>
-            <!-- Game 2 -->
-            <div id="game-2">
-              <div class="wrapper">
-                <div class="restart">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 50 50"
-                    style="fill: white"
-                    id="restart-button"
-                  >
-                    <path
-                      d="M 25 2 A 2.0002 2.0002 0 1 0 25 6 C 35.517124 6 44 14.482876 44 25 C 44 35.517124 35.517124 44 25 44 C 14.482876 44 6 35.517124 6 25 C 6 19.524201 8.3080175 14.608106 12 11.144531 L 12 15 A 2.0002 2.0002 0 1 0 16 15 L 16 4 L 5 4 A 2.0002 2.0002 0 1 0 5 8 L 9.5253906 8 C 4.9067015 12.20948 2 18.272325 2 25 C 2 37.678876 12.321124 48 25 48 C 37.678876 48 48 37.678876 48 25 C 48 12.321124 37.678876 2 25 2 z"
-                    ></path>
-                  </svg>
+        <div class="every-game">
+          <!-- Game 2 -->
+          <div id="game-2">
+            <div class="wrapper">
+              <div class="restart">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  style="fill: white"
+                  id="restart-button"
+                >
+                  <path
+                    d="M 25 2 A 2.0002 2.0002 0 1 0 25 6 C 35.517124 6 44 14.482876 44 25 C 44 35.517124 35.517124 44 25 44 C 14.482876 44 6 35.517124 6 25 C 6 19.524201 8.3080175 14.608106 12 11.144531 L 12 15 A 2.0002 2.0002 0 1 0 16 15 L 16 4 L 5 4 A 2.0002 2.0002 0 1 0 5 8 L 9.5253906 8 C 4.9067015 12.20948 2 18.272325 2 25 C 2 37.678876 12.321124 48 25 48 C 37.678876 48 48 37.678876 48 25 C 48 12.321124 37.678876 2 25 2 z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="game">
+                <div class="game-canvas">
+                  <div class="space-ship" id="space-ship">
+                    <img src="./game2/spaceship.PNG" alt="ship" />
+                    <img src="./game2/thrustereffect.PNG" alt="thruster" />
+                  </div>
+                  <div class="victory-planet"></div>
                 </div>
-                <div class="game">
-                  <div class="game-canvas">
-                    <div class="space-ship" id="space-ship">
-                      <img src="./game2/spaceship.PNG" alt="ship" />
-                      <img src="./game2/thrustereffect.PNG" alt="thruster" />
-                    </div>
-                    <div class="victory-planet"></div>
+              </div>
+              <div class="interface">
+                <div class="user-input-1">
+                  <label for="input-degree">Degree</label>
+                  <input
+                    type="number"
+                    value="0"
+                    name="input-degree"
+                    id="input-degree"
+                  />
+                </div>
+                <div class="user-input-2">
+                  <label for="input-force">Force(N)</label>
+                  <input
+                    type="number"
+                    value="0"
+                    max="100"
+                    name="input-force"
+                    id="input-force"
+                  />
+                </div>
+                <div class="user-input-3">
+                  <label for="fuel">Fuel</label>
+                  <div class="fuel-bar">
+                    <div id="current-fuel"></div>
                   </div>
                 </div>
-                <div class="interface">
-                  <div class="user-input-1">
-                    <label for="input-degree">Degree</label>
-                    <input
-                      type="number"
-                      value="0"
-                      name="input-degree"
-                      id="input-degree"
-                    />
-                  </div>
-                  <div class="user-input-2">
-                    <label for="input-force">Force(N)</label>
-                    <input
-                      type="number"
-                      value="0"
-                      max="100"
-                      name="input-force"
-                      id="input-force"
-                    />
-                  </div>
-                  <div class="user-input-3">
-                    <label for="fuel">Fuel</label>
-                    <div class="fuel-bar">
-                      <div id="current-fuel"></div>
-                    </div>
-                  </div>
-                  <div class="submit-button">
-                    <button name="fire">🚀</button>
-                    <div></div>
-                  </div>
+                <div class="submit-button">
+                  <button name="fire">🚀</button>
+                  <div></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="game-controller">
-            <div class="game-button-wrapper">
-              <button>
-                START
-                <div id="screen-status-light"></div>
-              </button>
-            </div>
-            <div class="grille">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="controller-shadow-1"></div>
-            <div class="controller-shadow-2"></div>
-          </div>
         </div>
-        <div class="bottom-border"></div>
       </div>
     </game>
-    <div style="margin: 20px">
+    <div style="background-color:gray; height:500px;">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, suscipit?
     </div>
-
-    <script src="main.js"></script>
     <script src="./game2/game2.js"></script>
   </body>
 </html>

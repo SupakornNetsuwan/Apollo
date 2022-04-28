@@ -13,7 +13,7 @@ let position = {
     y: -100
 }
 
-let availableFuel = 120
+let availableFuel = 140
 
 restartButton.addEventListener("click", () => {
     spaceShip.style.left = "100px"
@@ -23,7 +23,7 @@ restartButton.addEventListener("click", () => {
         x: 100,
         y: -100
     }
-    availableFuel = 120
+    availableFuel = 140
 })
 
 const newPosition = (x, y, deg, force) => {
@@ -42,7 +42,7 @@ const checkVictory = ({x, y}) => {
     //Test for victory position
     // const victoryPlanet = document.getElementsByClassName("victory-planet")[0];
 
-    if((x >= 1060 && x <= 1260) && ( y <= -130 && y >= -420)){
+    if((x >= 1050 && x <= 1350) && ( y <= -450 && y >= -650)){
         alert("Victory!")
         //Play next level!
     }
