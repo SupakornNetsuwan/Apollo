@@ -1,0 +1,615 @@
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #050512, #050512), linear-gradient(0deg, #040311, #040311), #020411;
+    position: absolute;
+    top:0; 
+    left:0 ;
+    bottom:0 ;
+    right:0;
+    overflow: hidden;
+    user-select: none;
+    
+}
+
+#game-3 #deco1 {
+    position: absolute;
+    width: 689px;
+    height: 261px;
+    right: -100px;
+    top: -37px;
+    background: url(deco1.png);
+    background-size: cover;
+}
+
+#game-3 #deco2 {
+    position: absolute;
+    width: 696px;
+    height: 177px;
+    left: -48px;
+    top: 47px;
+    background: url(deco2.png);
+    background-size: cover;
+}
+
+#game-3 #deco3 {
+    position: absolute;
+    width: 702px;
+    height: 261px;
+    left: -177px;
+    bottom: 48px;
+    background: url(deco3.png);
+    background-size: cover;
+}
+
+#game-3 #deco4 {
+    position: absolute;
+    width: 689px;
+    height: 117px;
+    right: -100px;
+    bottom: 61px;
+    background: url(deco4.png);
+    background-size: cover;
+}
+
+/* ----------------- game -------------------------------*/
+
+#game-3 #screen{
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    left: calc(50% - 640px);
+    top: calc(50% - 360px);
+    background: url(background.png);
+    background-size: cover;
+    border-radius: 34px;
+    box-shadow: 0px 0px 10px #000000;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#game-3 #hint_bar{
+    position: absolute;
+    width: 420px;
+    height: 60px;
+    background: hsl(80, 3%, 81%);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    left: calc(50% - 210px);
+    bottom: 5%;
+}
+
+#game-3 .text_hint{
+    position: absolute;
+}
+
+#game-3 h5{
+    position: absolute;
+    transition: 1s;
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 10px;
+    opacity: 0;
+    cursor: default;
+    transform: translateY(0px);
+    height: 20px;
+    pointer-events: none;
+}
+
+#game-3 .text_hint:hover h5{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+#game-3 #door{
+    position: absolute;
+    transform: translateX(-343px) translateY(300px) scale(0.16);
+    pointer-events: none;
+}
+
+#game-3 #tako{
+    position: absolute;
+    transform: translateX(-10px) translateY(110px) scale(0.25);
+}
+
+/* how to play*/
+
+#game-3 #htp{
+    position: absolute;
+    font-size:40px;
+    color: black;
+    background-color: hsl(0, 100%, 50%);
+    left: 2%;
+    top: 2%;
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #000000;
+    transition: .3s;
+}
+
+#game-3 #htp:hover{
+    background-color: hsl(0, 100%, 70%);
+    transition: .3s;
+}
+
+#game-3 #htp #howto_text{
+  position: absolute;
+  visibility: hidden;
+  background-color: #000000;
+  border-radius: 35px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  width: 100px;
+  height: 10px;
+  top: calc(50% - 5px);
+  left: 25px;
+  padding-left: 0px;
+  font-size:0px;
+  line-height: 20px;
+  opacity: 0.8;
+  transition: all 0.6s cubic-bezier(0.10, 0.54, 0.10, 1.5);
+  z-index: -1;
+}
+
+#game-3 #htp:hover #howto_text{
+    visibility: visible;
+    width: 550px;
+    height: 40px;
+    top: calc(50% - 20px);
+    padding-left: 8px;
+    font-size: 20px;
+    font-weight: 100;
+    transition: all 0.6s cubic-bezier(0.10, 0.54, 0.10, 1.5);
+    line-height: 40px;
+  }
+
+
+/*-------------win_screen-------------------------------*/
+
+#game-3 #win_main{
+    position: absolute;
+    visibility: hidden;
+    background-color: hsl(80, 3%, 81%);
+    width: 0px;
+    height: 480px;
+    left:640px;
+    top: calc(50% - 240px);
+    opacity: 0.8;
+}
+
+#game-3 #win_main[data-win="1"]{
+    visibility: visible;
+    width: 852px;
+    left:calc(50% - 426.6px);
+    border-radius: 34px;
+    box-shadow: 0px 0px 10px #000000;
+    overflow: hidden;
+    transition: 2s 2.5s;
+}
+
+/* ข้อความตอนชนะ  <-----------------------------------------------------------*/ 
+
+#game-3 #win_text{
+    position: absolute;
+    visibility: hidden;
+    width: 426.6px;
+    left:50%;
+    top: calc(50% - 240px);
+    overflow: hidden;
+    opacity: 0;
+}
+
+#game-3 #win_text[data-win="1"]{
+    visibility: visible;
+    width: 426.6px;
+    left:50%;
+    overflow: hidden;
+    opacity: 1;
+    transition: 2.5s 4s;
+}
+
+/*ปุ่ม  next <----------------------------------------- I'm on the next level yeah*/
+
+#game-3 #next{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 100%, 50%);
+    right: 20%;
+    bottom: 20%;
+    width:50px;
+    height:50px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 3px solid hsl(0, 0%, 0%);
+    transition: .3s;
+    cursor:pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#game-3 #next[data-win="1"]{
+    visibility: visible; 
+    opacity: 1; 
+    transition: all .3s;
+    transition: opacity 2.5s 4s;
+}
+
+#game-3 #next:hover{
+    background-color: hsl(0, 100%, 70%);
+    font-size: 25px;
+    transition: .3s;
+}
+
+
+/*----------------item_mix-------------------*/
+@keyframes box_mix{
+    0%{transform: translateX(455px) translateY(629px) scale(1);}
+    50%{transform: translateX(600px) translateY(320px) scale(1);}
+    100%{transform: translateX(600px) translateY(320px) scale(0);}
+}
+
+@keyframes card_mix{
+    0%{transform: translateX(530px) translateY(637px) scale(1);}
+    50%{transform: translateX(590px) translateY(345px) scale(1);}
+    100%{transform: translateX(590px) translateY(345px) scale(0);}
+}
+
+@keyframes pipe_mix{
+    0%{transform: translateX(655px) translateY(629px) scale(1);}
+    50%{transform: translateX(601px) translateY(325px) scale(1);}
+    100%{transform: translateX(601px) translateY(325px) scale(0);}
+}
+
+@keyframes suit_mix{
+    0%{transform: translateX(740px) translateY(624px) scale(1);}
+    50%{transform: translateX(560px) translateY(185px) scale(1);}
+    100%{transform: translateX(560px) translateY(185px) scale(0);}
+}
+
+@keyframes tape_mix{
+    0%{transform: translateX(788px) translateY(638px) scale(1);}
+    50%{transform: translateX(621.5px) translateY(344px) scale(1);}
+    100%{transform: translateX(621.5px) translateY(344px) scale(0);}
+}
+
+#game-3 #box[data-find="2"]{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: translateX(600px) translateY(320px) scale(0);
+    transition: 1s;
+    animation: box_mix 2s;
+}
+
+#game-3 #card[data-find="2"]{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    transform: translateX(590px) translateY(345px) scale(0);
+    transition: 1s;
+    animation: card_mix 2s;
+}
+
+#game-3 #pipe[data-find="2"]{
+    position: absolute;
+    width: 78px;
+    height: 70px;
+    transform: translateX(601px) translateY(325px) scale(0);
+    transition: 1s;
+    animation: pipe_mix 2s;
+}
+
+#game-3 #suit[data-find="2"]{
+    position: absolute;
+    width: 160px;
+    height: 350px;
+    transform: translateX(560px) translateY(185px) scale(0);
+    transition: 1s;
+    animation: suit_mix 2s;
+}
+
+#game-3 #tape[data-find="2"]{
+    position: absolute;
+    width: 37px;
+    height: 32px;
+    transform: translateX(621.5px) translateY(344px) scale(0);
+    transition: 1s;
+    animation: tape_mix 2s;
+}
+
+/* lithium_hydroxide_canister_hm*/
+
+@keyframes lhc_hm_ani{
+    0%{
+        transform: scale(0);
+        left: calc(50% - 174px);
+        top: calc(360px - 187.2px);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        left: calc(50% - 174px);
+        top: calc(360px - 187.2px);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        left: 20%;
+        top: calc(360px - 187.2px);
+        opacity: 1;
+    }
+}
+
+#game-3 #lhc_hm[data-win="0"]{
+    visibility: hidden;
+    width: 348px;
+    height: 374.4px;
+    position: absolute;
+    transform: scale(0);
+    left: calc(50% - 174px);
+    top: calc(360px - 187.2px);
+    opacity: 0;
+}
+
+#game-3 #lhc_hm[data-win="1"]{
+    visibility: visible;
+    width: 348px;
+    height: 374.4px;
+    position: absolute;
+    transform: scale(1);
+    left: 20%;
+    top: calc(360px - 187.2px);
+    opacity: 1;
+    animation: lhc_hm_ani 5s;
+}
+
+
+
+
+
+
+/*----------------- box ----------------------------------*/
+#game-3 #t_box{
+    transform: translateX(455px) translateY(629px);
+}
+ 
+#game-3 #t_box h5{
+    width: 50px;
+}
+
+#game-3 #box[data-find="0"]{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: translateX(825px) translateY(380px);
+}
+
+#game-3 #box[data-find="1"]{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translateX(455px) translateY(629px);
+    opacity: 0;
+    transition: 1s;
+}
+
+#game-3 #box_hint{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+#game-3 #box_hint[data-find="0"]{
+    filter: brightness(0%);
+}
+
+#game-3 #box_hint[data-find="1"]{
+    filter: brightness(100%);
+    transition: 1s .5s;
+}
+
+/*----------------- card ----------------------------------*/
+#game-3 #t_card{
+    transform: translateX(530px) translateY(637px);
+}
+
+#game-3 #t_card h5{
+    width: 100px;
+}
+
+#game-3 #card[data-find="0"]{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    transform: translateX(40px) translateY(650px) rotateZ(45deg);
+}
+
+@keyframes game-3_find_card {
+    0%{
+        transform: translateX(40px) translateY(650px) rotateZ(45deg);
+        opacity: 1;
+    }
+    30%, 40%{
+        transform: translateX(40px) translateY(520px) rotateZ(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(530px) translateY(637px) rotateZ(0deg);
+        opacity: 0;
+    }
+}
+
+#game-3 #card[data-find="1"]{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    transform: translateX(530px) translateY(637px) rotateZ(0deg);
+    opacity: 0;
+    animation: game-3_find_card 1s;
+}
+
+#game-3 #card_hint{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+}
+
+#game-3 #card_hint[data-find="0"]{
+    filter: brightness(0%);
+
+}
+
+#game-3 #card_hint[data-find="1"]{
+    filter: brightness(100%);
+    transition: 1s .5s;
+    pointer-events: none;
+}
+
+/*----------------- pipe ----------------------------------*/
+#game-3 #t_pipe{
+    transform: translateX(655px) translateY(629px);
+}
+ 
+#game-3 #t_pipe h5{
+    width: 58px;
+}
+
+#game-3 #pipe[data-find="0"]{
+    position: absolute;
+    width: 78px;
+    height: 70px;
+    transform: translateX(120px) translateY(590px);
+}
+
+@keyframes game-3_find_pipe {
+    0%{
+        transform: translateX(120px) translateY(590px) rotateZ(0deg);
+        opacity: 1;
+        width: 78px;
+        height: 70px;
+    }
+    30%, 40%{
+        transform: translateX(120px) translateY(520px) rotateZ(45deg);
+        opacity: 1;
+        width: 58px;
+        height: 50px;
+    }
+    100%{
+        transform: translateX(655px) translateY(629px) rotateZ(0deg);
+        opacity: 0;
+        width: 58px;
+        height: 50px;
+    }
+}
+
+#game-3 #pipe[data-find="1"]{
+    position: absolute;
+    width: 58px;
+    height: 50px;
+    opacity: 0;
+    transform: translateX(655px) translateY(629px) rotateZ(0deg);
+    animation: game-3_find_pipe 1s;
+
+}
+
+#game-3 #pipe_hint{
+    position: absolute;
+    width: 58px;
+    height: 50px;
+}
+
+#game-3 #pipe_hint[data-find="0"]{
+    filter: brightness(0%);
+}
+
+#game-3 #pipe_hint[data-find="1"]{
+    filter: brightness(100%);
+    transition: 1s .5s;
+    pointer-events: none;
+}
+
+/*----------------- suit ----------------------------------*/
+#game-3 #t_suit{
+    transform: translateX(740px) translateY(624px);
+}
+ 
+#game-3 #t_suit h5{
+    width: 25px;
+}
+
+#game-3 #suit[data-find="0"]{
+    position: absolute;
+    width: 160px;
+    height: 350px;
+    transform: translateX(-45px) translateY(160px);
+}
+
+#game-3 #suit[data-find="1"]{
+    position: absolute;
+    width: 25px;
+    height: 58px;
+    transform: translateX(740px) translateY(624px);
+    opacity: 0;
+    transition: 1s;
+}
+
+#game-3 #suit_hint{
+    position: absolute;
+    width: 25px;
+    height: 58px;
+}
+
+#game-3 #suit_hint[data-find="0"]{
+    filter: brightness(0%);
+}
+
+#game-3 #suit_hint[data-find="1"]{
+    filter: brightness(100%);
+    transition: 1s .5s;
+}
+
+/*----------------- tape ----------------------------------*/
+#game-3 #t_tape{
+    transform: translateX(788px) translateY(638px);
+}
+ 
+#game-3 #t_tape h5{
+    width: 37px;
+}
+
+#game-3 #tape[data-find="0"]{
+    position: absolute;
+    width: 37px;
+    height: 32px;
+    transform: translateX(225px) translateY(427px);
+}
+
+#game-3 #tape[data-find="1"]{
+    position: absolute;
+    width: 37px;
+    height: 32px;
+    transform: translateX(788px) translateY(638px);
+    opacity: 0;
+    transition: 1s;
+}
+
+#game-3 #tape_hint{
+    position: absolute;
+    width: 37px;
+    height: 32px;
+}
+
+#game-3 #tape_hint[data-find="0"]{
+    filter: brightness(0%);
+}
+
+#game-3 #tape_hint[data-find="1"]{
+    filter: brightness(100%);
+    transition: 1s .5s;
+}
+
+

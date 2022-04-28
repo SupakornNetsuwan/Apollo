@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>game-3</title>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="game-3">
+        <div id="deco1"></div>
+        <div id="deco2"></div>
+        <div id="deco3"></div>
+        <div id="deco4"></div>
+        <div id="screen">
+            <div id="htp"><center>?</center>
+                <div id="howto_text"><center>เรากำลังหายใจไม่ออก เราต้องหาของที่ซ่อนภายในยานให้ครบ!</center></div>
+            </div>
+            <div id="hint_bar">
+            </div>
+            <div class="text_hint" id="t_tape">
+                <img src="tape.png" id="tape_hint" data-find="0"></img>
+                <h5>
+                    <center> เทป </center>
+                </h5>
+            </div>
+            <img src="tape.png" id="tape" data-find="0" onclick="tape()"></img>
+            <div class="text_hint" id="t_suit">
+                <img src="suit.png" id="suit_hint" data-find="0"></img>
+                <h5>
+                    <center> ชุด </center>
+                </h5>
+            </div>
+            <img src="suit.png" id="suit" data-find="0" onclick="suit()"></img>
+            <img src="tako.png" id="tako"></img>
+            <div class="text_hint" id="t_box">
+                <img src="box.png" id="box_hint" data-find="0"></img>
+                <h5>
+                    <center> กล่อง </center>
+                </h5>
+            </div>
+            <img src="box.png" id="box" data-find="0" onclick="box()"></img>
+            <div class="text_hint" id="t_pipe">
+                <img src="pipe.png" id="pipe_hint" data-find="0"></img>
+                <h5>
+                    <center> ท่อ </center>
+                </h5>
+            </div>
+            <img src="pipe.png" id="pipe" data-find="0" onclick="pipe()"></img>
+            <div class="text_hint" id="t_card">
+                <img src="card.png" id="card_hint" data-find="0"></img>
+                <h5>
+                    <center> บัตร </center>
+                </h5>
+            </div>
+            <img src="card.png" id="card" data-find="0" onclick="card()"></img>
+            <img src="door.png" id="door"></img>
+            <div id="win_main" data-win="0">
+            <div id="win_text" data-win="0"><center>
+                <h1>เกือบตายแล้วมั้ยเรา<br>ดีนะที่เรายังพอหาของได้</h1><br><br>
+                <h4>สิ่งของทุกสิ่งที่คุณหาเจอนั้น<br>
+                    ได้ถูกนำมาสร้างเป็นเครื่องกรองอากาศที่ใช้กรองคาร์บอนไดออกไซด์ส่วนเกินภายในยาน<br>
+                    ทำให้เหล่านักบินอวกาศของโครงการอพอลโล่ 13<br>
+                    ที่ติดอยู่ในยานอวากาศหายใจได้และสามารถเดินทางโลกได้อย่างปลอดภัย</h4>
+                    </center>
+                </div>
+            </div>
+            <div id="next" data-win="0"><center>>></center></div>
+            <img src="lithium_hydroxide_canister_hm.png" id="lhc_hm" data-win="0"></img>
+        </div>
+    </div>
+</body>
+
+</html>
