@@ -1,5 +1,12 @@
 const fireButton = document.getElementsByName("fire")[0]
 const showPosition = document.getElementById("show-position");
+const restartButton = document.getElementById("restart-button");
+
+const spaceShip = document.getElementById("space-ship");
+const getDeg = document.getElementsByName("input-degree")[0] // Get a degree
+const getForce = document.getElementsByName("input-force")[0] // get a force
+//Decrease fuel on every fire
+const currentFuel = document.getElementById("current-fuel");
 
 let position = {
     x: 100,
@@ -8,12 +15,23 @@ let position = {
 
 let availableFuel = 120
 
+restartButton.addEventListener("click", () => {
+    spaceShip.style.left = "100px"
+    spaceShip.style.top = "100px"
+    currentFuel.style.width = "100%"
+    position = {
+        x: 100,
+        y: -100
+    }
+    availableFuel = 120
+})
+
 const newPosition = (x, y, deg, force) => {
     const changeToRad = Number(deg) * (Math.PI / 180)
     const newX = x + (Number(force) * Math.cos(changeToRad))
     const newY = y + (Number(force) * Math.sin(changeToRad))
 
-        console.log({x, y})
+    console.log({x, y})
     return ({
         x: newX,
         y: newY
@@ -26,16 +44,12 @@ const checkVictory = ({x, y}) => {
 
     if((x >= 1060 && x <= 1260) && ( y <= -130 && y >= -420)){
         alert("Victory!")
+        //Play next level!
     }
 }
 
 fireButton.addEventListener("click", () => {
-    const getDeg = document.getElementsByName("input-degree")[0] // Get a degree
-    const getForce = document.getElementsByName("input-force")[0] // get a force
-    const spaceShip = document.getElementById("space-ship");
-    //Decrease fuel on every fire
-    const currentFuel = document.getElementById("current-fuel");
-
+    spaceShip.style.transform = `rotate(${-1 * parseInt(getDeg.value)}deg)`
     
     if (availableFuel - Math.abs(Number(getForce.value / 10)) <= 0) {
         let direction = getForce.value < 0 ? -1 : 1;

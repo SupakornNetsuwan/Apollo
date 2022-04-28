@@ -10,7 +10,27 @@
   background-color: #f3f2f7;
 }
 
-/*------------------------------------------------ */
+/*------------------------------------------------*/
+#game-2 .restart {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
+
+#game-2 .restart>svg {
+  cursor: pointer;
+  width: 3em;
+  transition:0.1s ease-out;
+}
+
+#game-2 .restart>svg:hover {
+  transform:scale(1.1);
+  transition:0.1s ease-out;
+}
+
+/*------------------------------------------------*/
 
 #game-2 .interface {
   padding: 1em;
@@ -150,14 +170,14 @@
   width: 120px;
   height: 100%;
   background-color: #424242;
-  border-radius:2px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
-#game-2 .fuel-bar > #current-fuel {
+#game-2 .fuel-bar>#current-fuel {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(12,145,12,1) 0%, rgba(41,238,41,1) 100%);
+  background: linear-gradient(90deg, rgba(12, 145, 12, 1) 0%, rgba(41, 238, 41, 1) 100%);
   transition: all 0.5s ease-in-out;
 }
 
@@ -165,46 +185,88 @@
 
 #game-2 .game {
   height: 100%;
-  overflow-x:scroll;
-  overflow-y:hidden;
-  background:url("./space-game-bg.jpg");
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: url("./spacebackground.png");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: bottom center;
 }
 
-#game-2 .game-canvas{
-  position: relative;  
+#game-2 .game-canvas {
+  position: relative;
   height: 100%;
   width: 1492px;
 
 }
 
+/*   Ship   */
 #game-2 .space-ship {
   position: absolute;
   top: 100px;
   left: 100px;
-  transform: translate(0, 0);
   width: 8em;
   height: 8em;
-  overflow: hidden;
   border-radius: 50%;
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.308));
   transition: all 1s ease-in-out;
-  background-color: red;
+  pointer-events: none;
 }
 
-#game-2 .space-ship img {
+@keyframes shipmove {
+  0% {
+    transform: translate(4px, 7px);
+  }
+
+  50% {
+    transform: translate(-4px, -5px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+#game-2 .space-ship img[alt="ship"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  animation: shipmove 2s alternate ease-out infinite;
 }
 
-#game-2 .victory-planet{
-  width:200px;
-  height:200px;
-  background-color:lightblue;
+
+#game-2 .space-ship img[alt="thruster"] {
+  position: absolute;
+  top: 2px;
+  width: 200px;
+  animation: thrustereffect 2s alternate ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes thrustereffect {
+  0% {
+    opacity: 0.5;
+    left: -95px;
+    transform: translate(4px, 7px);
+  }
+
+  50% {
+    transform: translate(-4px, -5px);
+  }
+
+  100% {
+    opacity: 1;
+    left: -92px;
+    transform: translate(0);
+  }
+}
+
+/* ------- */
+
+#game-2 .victory-planet {
+  width: 200px;
+  height: 200px;
   position: absolute;
   bottom: 90px;
   right: 90px;
@@ -212,4 +274,23 @@
   border-radius: 50%;
   line-height: 200px;
   text-align: center;
+  background-image: url("./earth2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: earthmoving 2s alternate infinite;
+}
+
+@keyframes earthmoving {
+  0% {
+    transform: translate(4px, 7px);
+  }
+
+  50% {
+    transform: translate(-4px, -5px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
