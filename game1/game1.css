@@ -1,0 +1,99 @@
+.game-1{
+    background: url("game1bg.png");
+    background-size: cover;
+    background-position: center bottom;
+    display:flex;
+  }
+  
+  .game-1 .start{
+    background: white;
+    border: 5px solid black;
+    padding: 1em;
+    position:absolute;
+    z-index: 50;
+    top: 50%;
+    left: calc(50% - 2.2em);
+    font-family: Caveat;
+    transition: 0.5s;
+  }
+  
+  .game-1 .start:hover{
+    background:lightyellow;
+  }
+  
+  .game-1 .helpbox{
+    background: white;
+    border: 5px solid black;
+    padding: 0.5em;
+    position:absolute;
+    z-index: 40;
+    top: 20%;
+    left: 5%;
+    font-family: Caveat;
+    display: none;
+    transition: 0.5s;
+  }
+  
+  .game-1 .rocketbox{
+    height: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+    position:relative;
+  }
+  
+  .game-1 .controls{
+    position:absolute;
+    height:15%;
+    width:100%;
+    top:0;
+    background: #2e305f;
+    z-index: 30;
+    display: inline-flex;
+  }
+  
+  .game-1 .controls > div{
+    background:white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    height: 50%;
+    padding-inline: 0.5em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border: 5px solid black;
+    font-family: Caveat;
+    font-size: 1.5rem;
+  }
+  
+  .game-1 .help{
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  
+  .game-1 .help:hover{
+    background: lightyellow;
+  }
+  
+  .game-1 .gameover{
+    position: absolute;
+    background: white;
+    border: 5px solid black;
+    padding: 1em;
+    zIndex: 50;
+    top: 50%;
+    left: calc(50% - 3.5em);
+    font-family: Caveat;
+    transition: 0.5s;
+    text-align:center;
+  }
+  
+  .game-1 .gameover:hover{
+    background: lightyellow;
+  }
+  
+  
+  @keyframes spawnfire{
+    from{transform: scale(0);}
+    to{transform:scale(1);}
+  }
