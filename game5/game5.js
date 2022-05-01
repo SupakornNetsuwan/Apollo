@@ -35,7 +35,7 @@ const allGame = [
       {
         p1: { x: 71.57464212678937, y: 39.87730061349693 },
         p2: { x: 74.23312883435584, y: 42.12678936605317 },
-        point: 25,
+        point: 50,
       },
       {
         p1: { x: 53.78323108384458, y: 48.466257668711656 },
@@ -45,14 +45,14 @@ const allGame = [
       {
         p1: { x: 50.10224948875256, y: 73.21063394683026 },
         p2: { x: 41.922290388548056, y: 66.46216768916156 },
-        point: 25,
+        point: 40,
       },
     ],
   },
   {
     score: 0,
     found: 0,
-    time: 15,
+    time: 119,
     img: {
       real: "./images/game2/real.png",
       fake: "./images/game2/fake.png",
@@ -61,7 +61,7 @@ const allGame = [
       {
         p1: { x: 50.101010101010104, y: 32.323232323232325 },
         p2: { x: 56.36363636363636, y: 35.95959595959596 },
-        point: 25,
+        point: 45,
       },
       {
         p1: { x: 32.323232323232325, y: 3.2323232323232323 },
@@ -76,7 +76,7 @@ const allGame = [
       {
         p1: { x: 60.60606060606061, y: 87.07070707070706 },
         p2: { x: 64.84848484848484, y: 92.52525252525253 },
-        point: 25,
+        point: 70,
       },
     ],
   },
@@ -84,6 +84,7 @@ const allGame = [
 
 const game5 = document.getElementById("game-5");
 const startPage = game5.getElementsByClassName("startPage")[0];
+const endPage = game5.getElementsByClassName("endGame")[0];
 const gameArea = game5.getElementsByClassName("gameScreen")[0];
 const board = game5.getElementsByClassName("gameBoard")[0];
 const gameNum = game5.querySelector("#gameNum");
@@ -120,8 +121,16 @@ function startGame() {
   updateGame();
 }
 
+function endGame() {
+  showDialog(false);
+  setTimeout(() => {
+    started = false;
+    endPage.classList.remove("goUp");
+  }, 250);
+}
+
 function restartGame() {
-  showDialog(false)
+  showDialog(false);
   startPage.classList.remove("goUp");
   gameArea.classList.remove("started");
   for (let i = 0; i < circle.length; i++) circle[i].innerHTML = "";
@@ -212,7 +221,7 @@ function checkClick(e, img) {
         allGame[nowGame].answer[index].p2.y) /
       2;
 
-    score += allGame[nowGame].answer[index].point;
+    score += Math.ceil(allGame[nowGame].answer[index].point + (countDown / 10 * allGame[nowGame].answer[index].point));
     found.push(allGame[nowGame].answer[index]);
 
     for (let i = 0; i < circle.length; i++) {
@@ -234,7 +243,7 @@ function checkClick(e, img) {
           `${pad(Math.floor(countDown / 60))}.${pad(countDown % 60)}`,
           found.length,
           nowGame + 1 < allGame.length ? "Next" : "End",
-          nowGame + 1 < allGame.length ? nextGame : restartGame
+          nowGame + 1 < allGame.length ? nextGame : endGame
         );
       }, 250);
     }

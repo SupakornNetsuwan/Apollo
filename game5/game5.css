@@ -8,22 +8,49 @@
   position: relative;
   background-color: hsl(219, 33%, 15%);
 }
-#game-5 .startPage {
+#game-5 .startPage,
+#game-5 .endGame {
   position: absolute;
   color: white;
   font-weight: bold;
   font-family: "Angkor", cursive;
-  font-size: 5rem;
+  /* font-size: 5rem; */
   text-align: center;
-  width: 100%;
   transition: all 1s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-#game-5 .startPage #playBtn {
+#game-5 .startPage #card,
+#game-5 .endGame #card {
+  margin: 0 auto;
+  width: fit-content;
+  height: auto;
+  background-color: hsl(216, 20%, 50%);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
+}
+#game-5 .endGame #card {
+  width: 80%;
+}
+#game-5 .startPage #title {
+  font-size: 4rem;
+}
+#game-5 .startPage #detail {
+  font-size: 2rem;
+  margin: 30px;
+}
+#game-5 .startPage #playBtn,
+#game-5 .endGame #playBtn {
   width: 205px;
   height: 59px;
   border-radius: 25px;
   margin: 10px;
-  background-color: hsl(216, 20%, 50%);
+  background-color: hsl(29, 74%, 48%);
   font-family: "Angkor", cursive;
   color: white;
   font-weight: bold;
@@ -33,20 +60,80 @@
   cursor: pointer;
   transition: all 0.1s;
 }
-#game-5 .startPage #playBtn:hover {
-  background-color: hsl(216, 20%, 55%);
+#game-5 .startPage #playBtn:hover,
+#game-5 .endGame #playBtn:hover {
+  background-color: hsl(29, 74%, 53%);
 }
-#game-5 .startPage #playBtn:active{
+#game-5 .startPage #playBtn:active,
+#game-5 .endGame #playBtn:active {
   transform: translateY(5px);
   box-shadow: none;
 }
+#game-5 .endGame #title {
+  margin: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#game-5 .endGame #detail {
+  font-size: 1.5rem;
+  margin: 30px;
+  font-weight: normal;
+}
+/* Start How to play How to play How to play How to play How to play */
+#game-5 #howtoplayarea {
+  overflow: hidden;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+}
+#game-5 #howtoplay {
+  width: 50px;
+  height: 50px;
+  background-color: hsla(219, 19%, 54%, 0);
+  position: absolute;
+  top: 0%;
+  right: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s all;
+  padding: 0px 10px;
+}
+#game-5 #howtoplay:hover {
+  background-color: hsla(219, 19%, 64%, 0.2);
+}
+#game-5 #howtoplay:hover + #howtoplayText,
+#game-5 #howtoplayText:hover {
+  transform: translateX(0px);
+}
+#game-5 #howtoplayText {
+  position: absolute;
+  top: 0%;
+  right: 50px;
+  height: 40px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  margin: 5px 0px;
+  background-color: white;
+  border-radius: 20px;
+  transform: translateX(300px);
+  transition: 0.2s all;
+  /* pointer-events: none; */
+}
+/* END How to play How to play How to play How to play How to play */
 #game-5 .gameScreen {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transition: all 2s;
 }
 #game-5 .gameScreen .gameBoard {
@@ -189,40 +276,46 @@
 
 #game-5 .winDialog {
   position: absolute;
-  width: 80%;
-  height: 80%;
-  background-color: hsl(219, 33%, 25%);
+  width: 90%;
+  height: fit-content;
+  background-color: hsl(216, 20%, 50%);
   border-radius: 10px;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
   animation: bottomToCenter 0.25s linear;
   text-align: center;
+  font-family: "Angkor", cursive;
 }
 #game-5 .winDialog h1 {
-  font-size: 3.7rem;
+  font-size: 4rem;
   color: white;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 #game-5 .winDialog h2 {
   color: white;
   font-weight: bold;
+  font-size: 2rem;
+  margin: 10px;
 }
 #game-5 .winDialog button {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-  border: none;
-  color: hsl(219, 33%, 25%);
+  width: 205px;
+  height: 59px;
+  border-radius: 25px;
+  margin: 10px;
+  background-color: hsl(29, 74%, 48%);
+  font-family: "Angkor", cursive;
+  color: white;
   font-weight: bold;
-  background-color: white;
-  font-size: 1rem;
-  transition: all 0.3s;
-  cursor: pointer;
-  margin-top: 50px;
+  font-size: 2rem;
+  border: none;
   box-shadow: 0px 5px 1px #00000066;
+  cursor: pointer;
+  transition: all 0.1s;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 /* #game-5 .winDialog button:hover {
   transform: translateY(-10px);
@@ -240,10 +333,9 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  filter: blur(8px);
+  /* filter: blur(8px); */
   animation: fadeIn 0.25s linear;
 }
-
 @keyframes bottomToCenter {
   from {
     transform: translateY(100%);
