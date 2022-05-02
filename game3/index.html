@@ -15,8 +15,8 @@
         <div id="deco3"></div>
         <div id="deco4"></div>
         <div id="screen">
-            <div id="htp"><center>?</center>
-                <div id="howto_text"><center>เรากำลังหายใจไม่ออก เราต้องหาของที่ซ่อนภายในยานให้ครบ!</center></div>
+            <div id="htp" data-start="0"><center>?</center>
+                <div id="howto_text" data-start="0"><center>เรากำลังหายใจไม่ออก เราต้องหาของที่ซ่อนภายในยานให้ครบ!</center></div>
             </div>
             <div id="hint_bar">
             </div>
@@ -34,7 +34,7 @@
                 </h5>
             </div>
             <img src="suit.png" id="suit" data-find="0" onclick="suit()"></img>
-            <img src="tako.png" id="tako"></img>
+            <img src="hook.png" id="hook"></img>
             <div class="text_hint" id="t_box">
                 <img src="box.png" id="box_hint" data-find="0"></img>
                 <h5>
@@ -57,8 +57,9 @@
             </div>
             <img src="card.png" id="card" data-find="0" onclick="card()"></img>
             <img src="door.png" id="door"></img>
+            <div id="invisible_wall_end" data-win="0">
             <div id="win_main" data-win="0">
-            <div id="win_text" data-win="0"><center>
+                <div id="win_text" data-win="0"><center>
                 <h1>เกือบตายแล้วมั้ยเรา<br>ดีนะที่เรายังพอหาของได้</h1><br><br>
                 <h4>สิ่งของทุกสิ่งที่คุณหาเจอนั้น<br>
                     ได้ถูกนำมาสร้างเป็นเครื่องกรองอากาศที่ใช้กรองคาร์บอนไดออกไซด์ส่วนเกินภายในยาน<br>
@@ -67,8 +68,18 @@
                     </center>
                 </div>
             </div>
-            <div id="next" data-win="0"><center>>></center></div>
+            </div>
+            <div id="next" data-win="0"><center>Continue</center></div>
             <img src="lithium_hydroxide_canister_hm.png" id="lhc_hm" data-win="0"></img>
+            <div id="invisible_wall" data-start="0">
+                <div id="playoff" data-start="0"><center>
+                    <h1>How To Play</h1>
+                    <br>
+                    <h4>หาของที่ซ่อนภายในยานให้ครบ</h4>
+                    <br>
+                </center>
+                <button id="start" data-start="0" onclick="start()"><center>เริ่มเกม</center></button></div>
+            </div>
         </div>
     </div>
 </body>

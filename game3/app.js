@@ -1,10 +1,18 @@
 var score = 0
 
+function start() {
+    var start = document.querySelector("#start");
+    start.dataset.start = "1";
+    invisible_wall.dataset.start = "1";
+    // playoff.dataset.start = "1";
+    // start.innerHTML = "?";
+    // playoff.innerHTML = "<center>?</center>";
+    htp.dataset.start = "1"
+    setTimeout(function() {document.querySelector("#htp").style = "transition: background-color .3s;";},2200);
+    console.log("start!");
+}
+
 function win() {
-    console.log("you win");
-    console.log("you win");
-    console.log("you win");
-    console.log("you win");
     console.log("you win");
     document.querySelector("#box_hint").style = "display: none;";
     document.querySelector("#card_hint").style = "display: none;";
@@ -12,7 +20,7 @@ function win() {
     document.querySelector("#suit_hint").style = "display: none;";
     document.querySelector("#tape_hint").style = "display: none;";
     document.querySelector("#hint_bar").style = "bottom: -10%; transition: 1s;";
-    document.querySelector("#htp").style = "opacity: 0; transition: 2s;";
+    document.querySelector("#htp").style = "opacity: 0; transition: 2s; visibility: hidden;";
     var box = document.querySelector("#box");
     var card = document.querySelector("#card");
     var pipe = document.querySelector("#pipe");
@@ -27,7 +35,8 @@ function win() {
     setTimeout(function() {lhc_hm.dataset.win = "1";
                         win_main.dataset.win = "1";
                         win_text.dataset.win = "1";
-                        next.dataset.win = "1";},2000);
+                        next.dataset.win = "1";
+                        invisible_wall_end.dataset.win = "1";},1500);
 
 }
 
