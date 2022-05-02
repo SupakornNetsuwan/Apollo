@@ -16,7 +16,7 @@ function create_fire(){
     return;
   }
   var fire = document.createElement("img");
-  fire.src = "https://cdn.discordapp.com/attachments/900676640621875201/968219923090386944/game1fire.png";
+  fire.src = "game1fire.png";
   fire.style.position = "absolute";
   fire.className = "game-1-fire";
   fire.style.width = "20%";
