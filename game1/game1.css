@@ -13,7 +13,7 @@
     z-index: 50;
     top: 50%;
     left: calc(50% - 2.2em);
-    font-family: Caveat;
+    font-family: Mali;
     transition: 0.5s;
   }
   
@@ -26,12 +26,13 @@
     border: 5px solid black;
     padding: 0.5em;
     position:absolute;
-    z-index: 40;
+    z-index: 5000;
     top: 20%;
     left: 5%;
-    font-family: Caveat;
+    font-family: Mali;
     display: none;
     transition: 0.5s;
+    max-width: 50%;
   }
   
   .game-1 .rocketbox{
@@ -62,7 +63,7 @@
     align-items:center;
     justify-content:center;
     border: 5px solid black;
-    font-family: Caveat;
+    font-family: Mali;
     font-size: 1.5rem;
   }
   
@@ -75,21 +76,46 @@
     background: lightyellow;
   }
   
-  .game-1 .gameover{
-    position: absolute;
+  .game-1 .continue{
+    margin:auto;
     background: white;
     border: 5px solid black;
-    padding: 1em;
-    zIndex: 50;
-    top: 50%;
-    left: calc(50% - 3.5em);
-    font-family: Caveat;
+    padding: 0.5em;
     transition: 0.5s;
-    text-align:center;
   }
   
   .game-1 .gameover:hover{
     background: lightyellow;
+  }
+  
+  .game-1 .endgame{
+    position: absolute;
+    top: calc(50% - 7em);
+    left: 25%;
+    width: 50%;
+    background: white;
+    border: 5px solid black;
+    padding: 1em;
+    z-index: 1000;
+    font-family: Mali;
+    text-align:center;
+    display: none;
+  }
+  
+  .game-1 .restart{
+    margin:auto;
+    background: white;
+    border: 5px solid black;
+    padding: 0.5em;
+    transition: 0.5s;
+  }
+  
+  .game-1 .restart:hover{
+    background:lightyellow;
+  }
+  
+  .game-1 .continue:hover{
+    background:lightyellow;
   }
   
   

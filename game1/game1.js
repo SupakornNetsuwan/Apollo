@@ -12,20 +12,7 @@ var stop;
 function create_fire(){
   if(fire_count >= max_fire){
     clearInterval(stop);
-    var gameover = document.createElement("div");
-    gameover.innerHTML = "Gameover!<br>Restart?";
-    gameover.className = "gameover";
-    gameover.onclick = function(){
-      time = 0;
-      score = 0;
-      fire_count = 0;
-      removeElementsByClass("game-1-fire");
-      duration.innerHTML = "Duration: 0:00";
-      score_box.innerHTML = "Score: 0000";
-      this.remove();
-      start(); 
-    }
-    document.querySelector(".game-1").appendChild(gameover);
+    document.querySelector(".endgame").style.display =   "block";
     return;
   }
   var fire = document.createElement("img");
@@ -70,4 +57,15 @@ function removeElementsByClass(className){
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
     }
+}
+
+function restart(){
+  time = 0;
+  score = 0;
+  fire_count = 0;
+  removeElementsByClass("game-1-fire");
+  duration.innerHTML = "Duration: 0:00";
+  score_box.innerHTML = "Score: 0000";
+    document.querySelector(".endgame").style.display = "none";
+  start();
 }
