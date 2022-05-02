@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Mali' rel='stylesheet'>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Game #1</title>
-  <link href="game1.css" rel="stylesheet" type="text/css" />
+  <title>Game Demo</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -13,23 +13,29 @@
     <div class="controls">
       <div class="help" 
            onmouseover="document.querySelector('.game-1 .helpbox').style.display = 'block';"
-           onmouseout="document.querySelector('.game-1 .helpbox').style.display = 'none';">
-           ?
-        </div>
+           onmouseout="document.querySelector('.game-1 .helpbox').style.display = 'none';">?</div>
       <div class="score">Score: 0000</div>
       <div class="duration">Duration: 0:00</div>
     </div>
     <div class="helpbox">
       <h3 style="text-decoration: underline;">How to play?</h3>
-      <p>คลิกเมาส์เพื่อดับไฟ</p>
+      <p>จรวดกำลังจะถูกไฟเผา คุณจะช่วยภารกิจนี้ไว้ได้หรือไม่ คลิกเมาส์เพื่อดับไฟ</p>
     </div>
     <div class="start" onclick="start(this);">Start</div>
+    <div class="endgame">
+      <h3>Gameover!</h3>
+      <p>คุณทำได้ดีที่สุดแล้ว แต่ก็ยังไม่สามารถช่วยภารกิจไว้ได้ เหมือนในวันที่ 27 มกราคม 1967 ในอพอลโล1 ที่มีเหตุไฟไหม้เพราะภายในยานมีวัตถุไวไฟจำนวนมากรวมกับ การใช้เพียงออกซิเจน ทำให้ลูกเรือทั้งสามได้ดับชีวิตลง</p>
+      <div style="display: inline-flex; width: 100%; justify-content:center;">
+        <div class="restart" onclick="restart()">Restart?</div>
+        <div class="continue">Continue</div>
+      </div>
+    </div>
     <div class="rocketbox">
-      <img style="height: 100%;" src="game1rocket.png"/>
+      <img style="height: 100%;" src="https://cdn.discordapp.com/attachments/900676640621875201/968194599552184361/v2.png"/>
     </div>
               
   </div>
-  <script src="game1.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
