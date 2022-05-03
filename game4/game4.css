@@ -1,0 +1,566 @@
+#game-4 { 
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#game-4 .frame1 { 
+    background-color: black;
+    width: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+}
+#game-4 .board{
+    position:absolute;
+    bottom:0; 
+    width:99.9%;
+    left: 0%;
+    height: 20%;
+    border:3px solid white;
+    background-color: black;
+}
+#game-4 .steaks{
+    position:absolute;
+    height: 100%;
+    border:3px solid white;
+    width: 10%;
+
+}
+#game-4 .option{
+    position:absolute;
+    height: 100%;
+    border:3px solid white;
+    width: 80%;
+    left: 10%;
+}
+
+#game-4 .retry{
+    position:absolute;
+    height: 100%;
+    border:3px solid white;
+    width: 9.7%;
+    left: 90%;
+}
+#game-4 .imagePoint{
+    width: 1px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#game-4 .round{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 70px;
+    border: 3px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color: black;
+
+}
+#stageNum {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 60px;
+    transform: translate(-50%, -50%)
+}
+#game-4 .spaceman{
+    width: 670px;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-55.5%, -50%);
+}
+#game-4 .steaksFire{
+    width: 180%;
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+}
+#game-4 .captionFire{
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+#game-4 .steaks_click{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    opacity: 0.1;
+}
+#game-4 .life{
+    border: 2px dashed white;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    text-align: center;
+}
+#game-4 .life1{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    
+    
+}
+#game-4 .life2{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+#game-4 .life3{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+#game-4 .circleTime{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#game-4 .helper{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+#game-4 .answer{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    transform: translate(-100%, -50%);
+    right: 60%;
+    top: 10%;
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    z-index: 1;
+    
+}
+/* #game-4 .fonthelper{
+    font-size: 40px;
+    color: white;
+    bottom: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+} */
+#game-4 .x2point{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+}
+#game-4 .x2font{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#game-4 .turnback{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    transform: translate(100%, -50%);
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+}
+#game-4 .iconturnback{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+}
+#game-4 .bibi-arrow-repeat{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+
+}
+#game-4 .svgbutton{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: black;
+    border-radius: 50%;
+}
+wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url('star.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.super-parent {
+    width: 1200px;
+    height: 800px;
+    /* background-color:red; */
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+
+#game-4 .game-dots{
+    width: 1200px;
+    max-width: 1200px;
+    height: 600px;
+    min-height: 600px;
+    display: inline-block;
+    }
+#game-4 .pie {
+    width: 70px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, white 50%, black 50%);
+    position: relative;
+    overflow: hidden;
+    z-index: 23;
+    left: 13%;
+    bottom: 13%;
+    position: absolute;
+        
+}
+
+#game-4 .pie::after {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background: white;
+    transform-origin: 0 50%;
+    animation: pieAniAfter 30s linear;
+}
+.test{
+    animation: pieAniAfter 30s linear;
+}
+
+
+@keyframes pieAniAfter {
+    0%     { transform: rotate(0deg);   background: white; }
+    49.99% { transform: rotate(180deg); background: white; }
+    50%    { transform: rotate(0deg);   background: black; }
+    99.99% { transform: rotate(180deg); background: black; }
+    100%   { transform: rotate(0deg);   background: white; }
+}
+
+#game-4 .modalstart {
+    display: block; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: hsl(216, 20%, 50%);
+
+}
+
+#game-4 .startgameModal {
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    background-color: hsl(216, 20%, 50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#game-4 .modalnext {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: hsl(216, 20%, 50%);
+}
+
+#game-4 .modalnextstage {
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    background-color: hsl(216, 20%, 50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+#game-4 .modalend {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: hsl(216, 20%, 50%);
+}
+    
+#game-4 .endgameModal {
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    background-color: hsl(216, 20%, 50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+#game-4 .modalLose {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: hsl(216, 20%, 50%);
+}
+#game-4 .Lose2 {
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    background-color: hsl(216, 20%, 50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+#game-4 .circlex2{
+    display: none; 
+    position: fixed; 
+    z-index: 5;
+    left: -25px;
+    top: -25px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#game-4 .circlex2{
+    display: none; 
+    position: fixed;
+    z-index: 5;
+    left: -25px;
+    top: -25px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#game-4 .circleanswer{
+    display: none; 
+    position: fixed;
+    z-index: 5;
+    left: -100px;
+    top: -25px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+#game-4 .circletimeblock{
+    display: none; 
+    position: fixed;
+    z-index: 5;
+    left: 50px;
+    top: -25px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+#game-4 .modalscore {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+#game-4 .score {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    }
+#title {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+#detail {
+    color: white;
+    font-size: 2rem;
+    margin: 30px;
+    text-align: center;
+}
+.playBtn {
+    width: 205px;
+    height: 59px;
+    border-radius: 25px;
+    background-color: hsl(29, 74%, 48%);
+    font-family: "Angkor", cursive;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 0px 5px 1px #00000066;
+    cursor: pointer;
+    transition: all 0.1s;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+
+}
+#youpoint{
+    font-size: 2rem;
+    text-align: center;
+    top: 70%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    position: absolute;
+
+}
+#youpoint{
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+  
+
+}
+.showpoint{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+#game-4 .modaloption {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: hsl(216, 20%, 50%);
+
+}
+
+#game-4 .optionpage {
+    margin: 0 auto;
+    width: fit-content;
+    height: auto;
+    background-color: hsl(216, 20%, 50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.item{
+    top: 28%;
+    left:39%;
+    position: absolute;
+}
