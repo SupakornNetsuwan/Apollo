@@ -45,7 +45,7 @@ function conv_time(sec){
 
 function start(ctx){
   if(!(ctx === undefined)){
-   ctx.remove(); 
+   ctx.parentElement.remove(); 
   }
   stop = setInterval(function(){time += 1; duration.innerHTML = "Duration: " +         conv_time(time);}, 1000);
 
