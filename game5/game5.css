@@ -14,7 +14,7 @@
   position: absolute;
   color: white;
   font-weight: bold;
-  font-family: "Angkor", cursive;
+
   /* font-size: 5rem; */
   text-align: center;
   transition: all 1s;
@@ -52,7 +52,7 @@
   border-radius: 25px;
   margin: 10px;
   background-color: hsl(29, 74%, 48%);
-  font-family: "Angkor", cursive;
+;
   color: white;
   font-weight: bold;
   font-size: 2rem;
@@ -148,7 +148,7 @@
   grid-template-columns: auto auto auto;
   gap: 50px;
   padding: 0px 50px;
-  font-family: "Angkor", cursive;
+
   align-items: center;
   text-align: center;
   font-weight: bold;
@@ -200,7 +200,7 @@
   align-items: center;
   font-size: 2rem;
   color: white;
-  font-family: "Angkor", cursive;
+
 }
 /* /////////////////// Game Are ////////////////////// */
 #game-5 .gameArea {
@@ -287,7 +287,7 @@
   align-items: center;
   animation: bottomToCenter 0.25s linear;
   text-align: center;
-  font-family: "Angkor", cursive;
+  
 }
 #game-5 .winDialog h1 {
   font-size: 4rem;
@@ -307,7 +307,7 @@
   border-radius: 25px;
   margin: 10px;
   background-color: hsl(29, 74%, 48%);
-  font-family: "Angkor", cursive;
+
   color: white;
   font-weight: bold;
   font-size: 2rem;

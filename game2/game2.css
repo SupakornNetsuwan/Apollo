@@ -11,7 +11,6 @@
   position: absolute;
   color: white;
   font-weight: bold;
-  font-family: "Angkor", cursive;
   /* font-size: 5rem; */
   text-align: center;
   transition: all 1s;
@@ -48,7 +47,6 @@
   border-radius: 25px;
   margin: 10px;
   background-color: hsl(29, 74%, 48%);
-  font-family: "Angkor", cursive;
   color: white;
   font-weight: bold;
   font-size: 2rem;
@@ -130,7 +128,6 @@
 }
 
 #game-2 .user-input-1>label {
-  font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
   font-weight: 400;
@@ -203,7 +200,6 @@
 }
 
 #game-2 .user-input-2>label {
-  font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
   font-weight: 400;
@@ -234,7 +230,6 @@
 }
 
 #game-2 .user-input-3>label {
-  font-family: cloud;
   color: white;
   margin: 0 15px 0 0;
   font-weight: 400;

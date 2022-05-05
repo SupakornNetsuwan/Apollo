@@ -15,7 +15,6 @@
     border: 5px solid black;
     padding: 1em;
     z-index: 1000;
-    font-family: Mali;
     text-align:center;
     display: block;
   }
@@ -40,7 +39,6 @@
     z-index: 5000;
     top: 20%;
     left: 5%;
-    font-family: Mali;
     display: none;
     transition: 0.5s;
     max-width: 50%;
@@ -74,7 +72,6 @@
     align-items:center;
     justify-content:center;
     border: 5px solid black;
-    font-family: Mali;
     font-size: 1.5rem;
   }
   
@@ -108,7 +105,6 @@
     border: 5px solid black;
     padding: 1em;
     z-index: 1000;
-    font-family: Mali;
     text-align:center;
     display: none;
   }
