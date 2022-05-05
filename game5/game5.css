@@ -2,11 +2,12 @@
   margin: 0;
   height: 100%;
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: relative;
   background-color: hsl(219, 33%, 15%);
+  z-index:1000
 }
 #game-5 .startPage,
 #game-5 .endGame {
@@ -44,8 +45,8 @@
   font-size: 2rem;
   margin: 30px;
 }
-#game-5 .startPage #playBtn,
-#game-5 .endGame #playBtn {
+#game-5 .startPage #playBtn-2,
+#game-5 .endGame #playBtn-2 {
   width: 205px;
   height: 59px;
   border-radius: 25px;
@@ -60,12 +61,12 @@
   cursor: pointer;
   transition: all 0.1s;
 }
-#game-5 .startPage #playBtn:hover,
-#game-5 .endGame #playBtn:hover {
+#game-5 .startPage #playBtn-2:hover,
+#game-5 .endGame #playBtn-2:hover {
   background-color: hsl(29, 74%, 53%);
 }
-#game-5 .startPage #playBtn:active,
-#game-5 .endGame #playBtn:active {
+#game-5 .startPage #playBtn-2:active,
+#game-5 .endGame #playBtn-2:active {
   transform: translateY(5px);
   box-shadow: none;
 }

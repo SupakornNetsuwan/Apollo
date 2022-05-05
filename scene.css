@@ -1,0 +1,910 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier";
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+
+.blackscreen {
+  position: absolute;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  animation: blackscreen 5s ease-in-out;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+@keyframes blackscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* ================================================================= */
+/* sence - 01 */
+#sence01.wrapper {
+  position: relative;
+  background-image: url("img/IMG_1676.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* overflow: hidden; */
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+}
+
+#sence01.npc01 {
+  position: absolute;
+  background-image: url("img/nakbin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 30%;
+  left: 20%;
+  height: 330px;
+  width: 200px;
+}
+#sence01.npc02 {
+  position: absolute;
+  background-image: url("img/nakbin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50%;
+  right: 20%;
+  height: 330px;
+  width: 200px;
+}
+#sence01.cloud-left {
+  position: absolute;
+  background-image: url("img/clound4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  height: 110px;
+  width: 435px;
+  animation: cloud-left 5s infinite linear;
+}
+#sence02.cloud-right {
+  position: absolute;
+  background-image: url("img/clound2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -5%;
+  right: 0%;
+  height: 140px;
+  width: 445px;
+  animation: cloud-right 5s infinite linear;
+}
+@keyframes cloud-left {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes cloud-right {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+#sence01.dialog01 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  min-height: 60vh;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  animation: sence01-text-in-01 5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  z-index: 999;
+}
+@keyframes sence01-text-in-01 {
+  0% {
+    opacity: 0;
+    min-height: 60vh;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    min-height: 70vh;
+  }
+}
+#sence01.dialog02 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  animation: sence01-text-in-02 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 10s;
+}
+#sence01.dialog03 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  animation: sence01-text-in-02 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 14s;
+}
+#sence01.dialog04 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  animation: sence01-text-in-02 5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 17s;
+}
+#sence01.dialog05 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  animation: sence01-text-in-02 5s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 23s;
+}
+#sence01.dialog06 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  /* background: red; */
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  animation: sence01-text-in-02 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 28s;
+}
+@keyframes sence01-text-in-02 {
+  0% {
+    opacity: 0;
+    top: 25%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 35%;
+  }
+}
+#sence01.dialog07 {
+  position: absolute;
+  color: rgb(245, 245, 245);
+  /* background: red; */
+  top: 40%;
+  right: 35%;
+  opacity: 0;
+  animation: sence01-text-in-03 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 31s;
+}
+@keyframes sence01-text-in-03 {
+  0% {
+    opacity: 0;
+    top: 40%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
+}
+#sence01.wrapper .warp {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  height: 200px;
+  width: 200px;
+}
+
+/* ================================================================= */
+/* sence 02 */
+#sence02.wrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #000000;
+  background-image: url("img/star-dot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+#sence02.dialog01 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  text-align: center;
+  animation: sence02-text-in-01 2s alternate infinite;
+  animation-delay: 1s;
+}
+@keyframes sence02-text-in-01 {
+  0% {
+    top: 45%;
+  }
+  100% {
+    top: 55%;
+  }
+}
+#sence02.dialog02 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence02-text-in-1 5s linear;
+  animation-delay: 6s;
+}
+
+#sence02.dialog03 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence02-text-in-1 5s linear;
+  animation-delay: 12s;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20vh;
+}
+#sence02.space-ship {
+  height: 60vh;
+  width: 30vh;
+  animation-name: spaceboots;
+  animation-duration: 0.8s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#sence02.space-ship img {
+  width: 100%;
+}
+@keyframes spaceboots {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+#sence02.sun {
+  position: absolute;
+  background-image: url("img/Sun.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70%;
+  width: 40%;
+  top: -30%;
+  left: -15%;
+}
+#sence02.earth {
+  position: absolute;
+  /* background-color: red; */
+  background-image: url("img/earth.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  bottom: 20%;
+  right: 20%;
+  /* z-index: 999; */
+}
+#sence02.orange {
+  position: absolute;
+  background-image: url("img/orange.png");
+  background-repeat: none repeat;
+  background-size: cover;
+  height: 100px;
+  width: 300px;
+  bottom: 0%;
+  left: 0%;
+}
+#sence02.red {
+  position: absolute;
+  background-image: url("img/red.png");
+  background-repeat: none repeat;
+  background-size: cover;
+  height: 20%;
+  width: 20%;
+  bottom: 0%;
+  right: 0%;
+}
+/* ================================================================= */
+/* sence 03 */
+#sence03.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background-image: url("img/star-dot.png");
+  background-repeat: none repeat;
+  background-size: cover;
+  z-index: 0;
+  display: none;
+}
+#sence03.dialog01 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 1s;
+}
+#sence03.dialog02 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 6s;
+}
+@keyframes sence-03-text-in-01 {
+  0% {
+    opacity: 0;
+    top: 35%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 55%;
+  }
+}
+#sence03.dialog03 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 55%;
+  left: 55%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence03-text-in-02 5s linear;
+  animation-delay: 11s;
+}
+@keyframes sence03-text-in-02 {
+  0% {
+    opacity: 0;
+    top: 55%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 75%;
+  }
+}
+#sence03.dialog04 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  min-height: 60vh;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  animation: sence03-text-in-03 5s linear;
+  animation-delay: 18s;
+  z-index: 4;
+}
+@keyframes sence03-text-in-03 {
+  0% {
+    opacity: 0;
+    min-height: 60vh;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    min-height: 70vh;
+  }
+}
+#sence03.dialog05 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 4s linear;
+  animation-delay: 25s;
+}
+#sence03.dialog06 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 30s;
+}
+#sence03.dialog07 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  right: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 35s;
+}
+#sence03.dialog08 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  right: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 40s;
+}
+#sence03.dialog09 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  right: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-03-text-in-01 5s linear;
+  animation-delay: 45s;
+}
+#sence03.moon {
+  position: absolute;
+  /* background: rgb(204, 202, 202); */
+  background-image: url("img/moon1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0%;
+  left: -50%;
+  width: 200%;
+  height: 20%;
+}
+#sence03.moon-stone {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/asteroid1.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 70%;
+  width: 750px;
+  height: 280px;
+  transform: translateX(53px) translateY(77px) rotate(40deg);
+  z-index: 2;
+}
+#sence03.blackscreen {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  animation: blackscreen 7s 17s;
+  animation-timing-function: steps(1, end);
+}
+@keyframes blackscreen {
+  from {
+    background: black;
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+#sence03.alian {
+  position: absolute;
+  top: 62%;
+  left: 49.2%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-image: url("img/alian.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 42.5vh;
+  width: 35vh;
+  opacity: 0;
+  animation: alianshow 1s 18s;
+  animation-timing-function: steps(1, end);
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+@keyframes alianshow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ================================================================= */
+/* sence 04 */
+#sence04.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background-image: url("img/star-dot.png");
+  background-repeat: none repeat;
+  background-size: cover;
+  display: none;
+}
+#sence04.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sence04.moon {
+  position: absolute;
+  /* background: rgb(204, 202, 202); */
+  background-image: url("img/moon1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0%;
+  left: -50%;
+  width: 200%;
+  height: 20%;
+}
+#sence04.moon-stone {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/asteroid1.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 70%;
+  width: 750px;
+  height: 280px;
+  transform: translateX(53px) translateY(77px) rotate(40deg);
+  z-index: 2;
+}
+#sence04.alian {
+  position: absolute;
+  top: 62%;
+  left: 49.2%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-image: url("img/alian.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 42.5vh;
+  width: 35vh;
+  opacity: 1;
+  animation: alianshow 1s 18s;
+  animation-timing-function: steps(1, end);
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+#sence04.dialog01 {
+  position: absolute;
+  color: #fff;
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence04-text-in-01 5s linear;
+  animation-delay: 1s;
+}
+#sence04.dialog02 {
+  position: absolute;
+  color: #fff;
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence04-text-in-01 5s linear;
+  animation-delay: 6s;
+}
+@keyframes sence04-text-in-01 {
+  0% {
+    opacity: 0;
+    top: 35%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 55%;
+  }
+}
+/* ================================================================= */
+/* sence 05 */
+
+#sence05.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background-image: url("img/star-dot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:none;
+}
+#sence05.dialog01 {
+  position: absolute;
+  color: #fff;
+  top: 35%;
+  left: 25%;
+  opacity: 0;
+  text-align: center;
+  animation: sence-05-text-in-01 5s linear;
+  animation-delay: 1s;
+}
+@keyframes sence-05-text-in-01 {
+  0% {
+    opacity: 0;
+    top: 35%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 55%;
+  }
+}
+#sence05.dialog02 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 20%;
+  opacity: 0;
+  text-align: center;
+  animation: sence-05-text-in-01 5s linear;
+  animation-delay: 6s;
+}
+
+#sence05.dialog03 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence-05-text-in-01 5s linear;
+  animation-delay: 12s;
+}
+
+#sence05.second-dialog {
+  position: absolute;
+}
+#sence05.space-ship {
+  background-image: url("img/char3.png");
+  height: 60vh;
+  width: 30vh;
+  animation-name: spaceboots;
+  animation-duration: 0.8s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#sence05.space-ship img {
+  width: 100%;
+  transform: scaleY(-1);
+}
+
+#sence05.earth {
+  position: absolute;
+  /* background-color: red; */
+  background-image: url("img/earth.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  bottom: 10%;
+  right: 40%;
+  /* z-index: 999; */
+}
+/* ================================================================= */
+/* sence 06 */
+#sence06.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  background-image: url("img/star-dot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:none;
+}
+#sence06.dialog01 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence06-text-in 5s linear;
+  animation-delay: 1s;
+}
+@keyframes sence06-text-in {
+  0% {
+    opacity: 0;
+    top: 35%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 55%;
+  }
+}
+#sence06.dialog02 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence06-text-in 5s linear;
+  animation-delay: 6s;
+}
+
+#sence06.dialog03 {
+  position: absolute;
+  color: #fff;
+  /* background: red; */
+  top: 35%;
+  left: 25%;
+  height: 70px;
+  width: 200px;
+  opacity: 0;
+  text-align: center;
+  animation: sence06-text-in 5s linear;
+  animation-delay: 12s;
+}
+
+#sence06.second-dialog {
+  position: absolute;
+}
+#sence06#sence06.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20vh;
+}
+#sence06.space-ship {
+  height: 60vh;
+  width: 30vh;
+  animation-name: spaceboots;
+  animation-duration: 0.8s;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#sence06.space-ship img {
+  width: 100%;
+  transform: scaleY(-1);
+}

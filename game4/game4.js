@@ -277,19 +277,15 @@ function end(){
 }
 }
 
-
-
-
 var modal = document.getElementsByClassName("modalstart")[0];
-var start = document.getElementsByClassName("start")[0];
+var start = document.getElementsByClassName("start-game-4")[0];
 var modaloption = document.getElementsByClassName("modaloption")[0];
 var option = document.getElementsByClassName("optionbutton")[0];
 
-
-start.onclick = function() {
-  modal.style.display = "none";
-  modaloption.style.display = "block";
-}
+start.addEventListener("click", () => {
+    modal.style.display = "none";
+    modaloption.style.display = "block";
+})
 
 option.onclick = function(){
     modaloption.style.display = "none";

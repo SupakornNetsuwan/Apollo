@@ -4,7 +4,75 @@
   bottom: 0;
   right: 0;
   position: absolute;
+  display:none;
+}
+
+.endGame {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-family: "Angkor", cursive;
+  /* font-size: 5rem; */
+  text-align: center;
+  transition: all 1s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+}
+.endGame #card {
+  margin: 0 auto;
+  width: fit-content;
+  height: auto;
+  background-color: hsl(216, 20%, 50%);
+  padding: 20px;
+  border-radius: 10px;
   z-index: 1;
+}
+.endGame #card {
+  width: 80%;
+}
+/* .startPage #title {
+  font-size: 4rem;
+}
+.startPage #detail {
+  font-size: 2rem;
+  margin: 30px;
+} */
+.endGame #playBtn-game2 {
+  width: 205px;
+  height: 59px;
+  border-radius: 25px;
+  margin: 10px;
+  background-color: hsl(29, 74%, 48%);
+  font-family: "Angkor", cursive;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+  box-shadow: 0px 5px 1px #00000066;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.endGame #playBtn-game2:hover {
+  background-color: hsl(29, 74%, 53%);
+}
+.endGame #playBtn-game2:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+.endGame #title {
+  margin: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.endGame #detail {
+  font-size: 1.5rem;
+  margin: 30px;
+  font-weight: normal;
 }
 
 #game-2 .wrapper {

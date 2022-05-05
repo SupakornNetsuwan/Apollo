@@ -1,6 +1,6 @@
-var score = 0
+var scoreGame3 = 0
 
-function start() {
+function startGame3kub() {
     var start = document.querySelector("#start");
     start.dataset.start = "1";
     invisible_wall.dataset.start = "1";
@@ -35,7 +35,7 @@ function win() {
     setTimeout(function() {lhc_hm.dataset.win = "1";
                         win_main.dataset.win = "1";
                         win_text.dataset.win = "1";
-                        next.dataset.win = "1";
+                        next_game3.dataset.win = "1";
                         invisible_wall_end.dataset.win = "1";},1500);
 
 }
@@ -55,25 +55,25 @@ function box() {
     box.dataset.find = "1";
     box_hint.dataset.find = "1";
     if (isbox == 1){
-        score++;
+        scoreGame3++;
         isbox = 0;
-        console.log(score);
+        console.log(scoreGame3);
     }
-    if (score >= 5){
+    if (scoreGame3 >= 5){
         setTimeout(function() {win()},1000);
     }
 }
 
 function card() {
-    var card = document.querySelector("#card");
+    var card = document.querySelector("#card-dup");
     card.dataset.find = "1";
     card_hint.dataset.find = "1";
     if (iscard == 1){
-        score++;
+        scoreGame3++;
         iscard = 0;
-        console.log(score);
+        console.log(scoreGame3);
     }
-    if (score >= 5){
+    if (scoreGame3 >= 5){
         setTimeout(function() {win()},1000);
     }
 }
@@ -83,11 +83,11 @@ function pipe() {
     pipe.dataset.find = "1";
     pipe_hint.dataset.find = "1";
     if (ispipe == 1){
-        score++;
+        scoreGame3++;
         ispipe = 0;
-        console.log(score);
+        console.log(scoreGame3);
     }
-    if (score >= 5){
+    if (scoreGame3 >= 5){
         setTimeout(function() {win()},1000);
     }
 }
@@ -97,11 +97,11 @@ function suit() {
     suit.dataset.find = "1";
     suit_hint.dataset.find = "1";
     if (issuit == 1){
-        score++;
+        scoreGame3++;
         issuit = 0;
-        console.log(score);
+        console.log(scoreGame3);
     }
-    if (score >= 5){
+    if (scoreGame3 >= 5){
         setTimeout(function() {win()},1000);
     }
 }
@@ -111,11 +111,11 @@ function tape() {
     tape.dataset.find = "1";
     tape_hint.dataset.find = "1";
     if (istape == 1){
-        score++;
+        scoreGame3++;
         istape = 0;
-        console.log(score);
+        console.log(scoreGame3);
     }
-    if (score >= 5){
+    if (scoreGame3 >= 5){
         setTimeout(function() {win()},1000);
     }
 }

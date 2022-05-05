@@ -6,14 +6,93 @@
     <meta name="viewport" content="width=\, initial-scale=1.0" />
     <title>Multi group work</title>
     <link rel="stylesheet" href="mycss.css" />
+    <link rel="stylesheet" href="./game1/game1.css" />
     <link rel="stylesheet" href="./game2/game2.css" />
+    <link rel="stylesheet" href="./game3/game3.css" />
+    <link rel="stylesheet" href="./game4/game4.css" />
+    <link rel="stylesheet" href="./game5/game5.css" />
+    <link rel="stylesheet" href="./scene.css" />
   </head>
   <body>
     <game>
       <div class="game-wrapper">
+        <div class="finish-entire-game">
+          <p>ยินดีด้วย ภารกิจสำเร็จแล้ว! 🎉</p>
+        </div>
         <div class="every-game">
+          <!-- Game 1 -->
+          <div
+            class="game-1"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              z-index: 23;
+            "
+          >
+            <div class="controls">
+              <div
+                class="help"
+                onmouseover="document.querySelector('.game-1 .helpbox').style.display = 'block';"
+                onmouseout="document.querySelector('.game-1 .helpbox').style.display = 'none';"
+              >
+                ?
+              </div>
+              <div class="score">Score: 0000</div>
+              <div class="duration">Duration: 0:00</div>
+            </div>
+            <div class="helpbox">
+              <h3 style="text-decoration: underline">How to play?</h3>
+              <p>
+                จรวดกำลังจะถูกไฟเผา คุณจะช่วยภารกิจนี้ไว้ได้หรือไม่
+                คลิกเมาส์เพื่อดับไฟ
+              </p>
+            </div>
+            <div class="start">
+              <h3 style="text-decoration: underline">Game #1</h3>
+              <p>
+                จรวดกำลังจะถูกไฟเผา คุณจะช่วยภารกิจนี้ไว้ได้หรือไม่
+                คลิกเมาส์เพื่อดับไฟ
+              </p>
+              <div class="startbtn" onclick="start(this);">Start</div>
+            </div>
+            <div class="endgame">
+              <h3>Gameover!</h3>
+              <p>
+                คุณทำได้ดีที่สุดแล้ว แต่ก็ยังไม่สามารถช่วยภารกิจไว้ได้
+                เหมือนในวันที่ 27 มกราคม 1967 ในอพอลโล1
+                ที่มีเหตุไฟไหม้เพราะภายในยานมีวัตถุไวไฟจำนวนมากรวมกับ
+                การใช้เพียงออกซิเจน ทำให้ลูกเรือทั้งสามได้ดับชีวิตลง
+              </p>
+              <div
+                style="
+                  display: inline-flex;
+                  width: 100%;
+                  justify-content: center;
+                "
+              >
+                <div class="restart" onclick="restart()">Restart?</div>
+                <div class="game-1-continue continue">Continue</div>
+              </div>
+            </div>
+            <div class="rocketbox">
+              <img style="height: 100%" src="./game1/game1rocket.png" />
+            </div>
+          </div>
+
           <!-- Game 2 -->
           <div id="game-2">
+            <div class="endGame goUp-game-2">
+              <div id="card">
+                <div id="title" class="title-game2">How to play</div>
+                <div id="detail" class="detail-game-2">
+                  ให้เคลื่อนยานกลับไปยังโลกโดยที่มีเชื้อเพลิงจำกัดปุ่มขวาล่างคือกดเพื่อยิงไอพ่น ใส่ Degree, Force เพื่อเลือกทิศทางและความแรงของไอพ่น
+                </div>
+                <button id="playBtn-game2" class="playBtn-game-2">Continue</button>
+              </div>
+            </div>
             <div class="wrapper">
               <div class="restart">
                 <svg
@@ -73,13 +152,486 @@
               </div>
             </div>
           </div>
-          
+
+          <!-- Game 4 -->
+          <div id="game-4">
+            <wrapper class="game-4-wrapper">
+              <div class="super-parent">
+                <div class="modalstart">
+                  <div class="startgameModal">
+                    <div id="title">How to play<br /><br /></div>
+                    <div id="detail">
+                      ส่งกำลังใจไปให้เหล่านักบินอวกาศ<br /><br />
+                      โดยการคลิกเมาส์ของคุณลากไปตามจุด
+                    </div>
+                    <button class="start start-game-4 playBtn">NEXT</button>
+                  </div>
+                </div>
+                <div class="modaloption">
+                  <div class="optionpage">
+                    <div id="title">ITEM</div>
+                    <svg
+                      class="item"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill="white"
+                        fill-rule="evenodd"
+                        d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
+                      />
+                      <path
+                        fill="white"
+                        d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"
+                      />
+                    </svg>
+                    <div id="detail">? เปิดเฉลยตัวเลขให้ดูเป็นเวลา 3 วิ</div>
+                    <div id="detail">X2 คะแนนคูณ 2(STREAKS)</div>
+                    <div id="detail">RESET เวลา</div>
+                    <button class="optionbutton playBtn">PLAY</button>
+                  </div>
+                </div>
+                <div class="modalnext">
+                  <div class="modalnextstage">
+                    <button class="next playBtn">Next</button>
+                  </div>
+                </div>
+                <div class="modalend">
+                  <div class="endgameModal">
+                    <div id="title">ยินดีด้วยคุณถึงดวงจันทร์แล้ว 🎉<br /></div>
+                    <div id="detail">
+                      รู้หรือไม่ในวันที่ 20 กรกฎาคม 1969 นีล อาร์มสตรองหน่ะ<br />
+                      เป็นคนแรกของโลกที่ไปเหยียบดวงจันทร์กลุ่มแรก <br />
+                      และเขายังไปปักธงของชาติอเมริกาเพื่อว่า<br />
+                      ชาวอเมริกาเป็นชาติแรกที่ไปเหยียบดวงจันทร์ได้
+                    </div>
+                    <button class="continue playBtn game-4-done">
+                      Continue
+                    </button>
+                    <div id="youpoint">แต้มของคุณ :</div>
+                    <div class="showpoint"></div>
+                  </div>
+                </div>
+
+                <div class="modalLose">
+                  <div class="Lose2">
+                    <div id="title">คุณแพ้</div>
+                    <button class="lose playBtn">Retry</button>
+                  </div>
+                </div>
+                <div class="frame1">
+                  <div class="gamePoint">
+                    <div class="round">
+                      <div id="stageNum"></div>
+                    </div>
+                    <div class="frameGamedot">
+                      <canvas class="game-dots"></canvas>
+                    </div>
+
+                    <script
+                      type="text/javascript"
+                      src="./game4/game4.js"
+                    ></script>
+                  </div>
+                  <div class="board">
+                    <div class="steaks">
+                      <img src="./game4/fire.png" alt="" class="steaksFire" />
+                      <div class="captionFire">STREAKS</div>
+                      <div class="steaks_click"></div>
+                    </div>
+                    <div class="option">
+                      <div class="life">
+                        <span class="life1">X </span>
+                        <span class="life2">X </span>
+                        <span class="life3">X</span>
+                      </div>
+                      <div class="circleTime">
+                        <div class="pie name"></div>
+                      </div>
+                      <div class="time-display"></div>
+                      <div class="helper">
+                        <div class="circletimeblock"></div>
+                        <div class="circlex2"></div>
+                        <div class="circleanswer"></div>
+                        <button onclick="answer()" class="answer fontheleper">
+                          ?
+                        </button>
+                        <button
+                          onclick="x2(), hideX2()"
+                          id="X2"
+                          class="x2point x2font"
+                        >
+                          X2
+                        </button>
+                        <button onclick="restartTime()" class="turnback">
+                          <svg
+                            class="iconturnback"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="55"
+                            height="55"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill="white"
+                              fill-rule="evenodd"
+                              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
+                            />
+                            <path
+                              fill="white"
+                              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="retry">
+                      <button onclick="restart()" class="svgbutton">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="80"
+                          height="80"
+                          fill="white"
+                          class="bibi-arrow-repeat"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </wrapper>
+          </div>
+          <!-- Game 5 -->
+          <div
+            id="game-5"
+            style="position: absolute; top: 0; left: 0; bottom: 0; right: 0"
+          >
+            <div class="gameScreen">
+              <div class="gameArea">
+                <div class="images">
+                  <img id="realImg" src=".game5/images/game1/real.png" />
+                  <div class="circle"></div>
+                </div>
+                <div class="images">
+                  <img id="fakeImg" src=".game5/images/game1/fake.png" />
+                  <div class="circle"></div>
+                </div>
+              </div>
+              <div id="howtoplayarea">
+                <button type="button" id="howtoplay">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      fill="white"
+                      d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 400c-18 0-32-14-32-32s13.1-32 32-32c17.1 0 32 14 32 32S273.1 400 256 400zM325.1 258L280 286V288c0 13-11 24-24 24S232 301 232 288V272c0-8 4-16 12-21l57-34C308 213 312 206 312 198C312 186 301.1 176 289.1 176h-51.1C225.1 176 216 186 216 198c0 13-11 24-24 24s-24-11-24-24C168 159 199 128 237.1 128h51.1C329 128 360 159 360 198C360 222 347 245 325.1 258z"
+                    />
+                  </svg>
+                </button>
+                <div id="howtoplayText">หาความแตกต่างของสองภาพนี้</div>
+              </div>
+              <div id="gameNum">1</div>
+              <div class="gameBoard">
+                <div id="score">score: 0</div>
+                <div id="time">time: 0</div>
+                <div id="diff">diff points 0/0</div>
+              </div>
+            </div>
+
+            <!-- Call startGame Function to start -->
+            <div class="startPage">
+              <div id="card">
+                <div id="title">How to play</div>
+                <div id="detail">
+                  ช่วยพวกเราด้วย นอกอวกาศมันมืดไปหมด <br />
+                  คุณสามารถช่วยพวกเขาโดยการ <br />
+                  คลิกที่สิ่งที่แตกต่างระหว่างสองรูปนี้
+                </div>
+                <button id="playBtn-2">Start</button>
+              </div>
+            </div>
+            <div class="endGame goUp">
+              <div id="card">
+                <div id="title">
+                  พวกเจ้าเก่งมากที่ทำภารกิจผ่านได้
+                  รู้มั้ยว่ารูปที่พวกเจ้าเห็นในภารกิจหน่ะ
+                </div>
+                <div id="detail">
+                  รูปแรกเป็น จรวด saturn V ซึ่งถูกส่งออกไปทำภารกิจนอกโลกถึง 13
+                  ครั้ง จากศูนย์อวกาศเคนเนดีใน ฟลอริดา
+                  ยานนี้ไม่เคยประวัติการสูญเสียลูกเรือจากภารกิจแม้แต่คนเดียว
+                  เป็นยานที่มีความสูง, น้ำหนัก, พลังงาน
+                  และประสิทธิภาพมากที่สุดเท่าที่เคยมีมา
+                  อีกทั้งเป็นยานลำเดียวที่สามารถขนส่งมนุษย์ขึ้นไปโคจรรอบโลกได้<br /><br />
+                  รูปสองเป็นการส่ง apollo 11 ขึ้นไปบนดวงจันทร์สำเร็จ โดยใช้ยาน
+                  lunar module ในการลงจอด มีนิวอาร์มสตรอง
+                  ลงเหยียบดวงจันทร์เป็นครั้งแรกและ
+                  ได้ปักธงชาติอเมริกาเพื่อเป็นเครื่องพิสูจน์ความสำเร็จในครั้งนี้
+                </div>
+                <button id="playBtn-2" class="game-5-done">Continue</button>
+              </div>
+            </div>
+          </div>
+          <script src="./game5/game5.js"></script>
+
+          <!-- Game 3 (Adam) -->
+          <div id="game-3">
+            <div class="bg-game-3"></div>
+            <div id="deco1"></div>
+            <div id="deco2"></div>
+            <div id="deco3"></div>
+            <div id="deco4"></div>
+            <div id="screen">
+                <div id="htp" data-start="0"><center>?</center>
+                    <div id="howto_text" data-start="0"><center>เรากำลังหายใจไม่ออก เราต้องหาของที่ซ่อนภายในยานให้ครบ!</center></div>
+                </div>
+                <div id="hint_bar">
+                </div>
+                <div class="text_hint" id="t_tape">
+                    <img src="./game3/tape.png" id="tape_hint" data-find="0"></img>
+                    <h5>
+                        <center> เทป </center>
+                    </h5>
+                </div>
+                <img src="./game3/tape.png" id="tape" data-find="0" onclick="tape()"></img>
+                <div class="text_hint" id="t_suit">
+                    <img src="./game3/suit.png" id="suit_hint" data-find="0"></img>
+                    <h5>
+                        <center> ชุด </center>
+                    </h5>
+                </div>
+                <img src="./game3/suit.png" id="suit" data-find="0" onclick="suit()"></img>
+                <img src="./game3/hook.png" id="hook"></img>
+                <div class="text_hint" id="t_box">
+                    <img src="./game3/box.png" id="box_hint" data-find="0"></img>
+                    <h5>
+                        <center> กล่อง </center>
+                    </h5>
+                </div>
+                <img src="./game3/box.png" id="box" data-find="0" onclick="box()"></img>
+                <div class="text_hint" id="t_pipe">
+                    <img src="./game3/pipe.png" id="pipe_hint" data-find="0"></img>
+                    <h5>
+                        <center> ท่อ </center>
+                    </h5>
+                </div>
+                <img src="./game3/pipe.png" id="pipe" data-find="0" onclick="pipe()"></img>
+                <div class="text_hint" id="t_card">
+                    <img src="./game3/card.png" id="card_hint" data-find="0"></img>
+                    <h5>
+                        <center> บัตร </center>
+                    </h5>
+                </div>
+                <img src="./game3/card.png" id="card-dup" data-find="0" onclick="card()"></img>
+                <img src="./game3/door.png" id="door"></img>
+                <div id="invisible_wall_end" data-win="0">
+                <div id="win_main" data-win="0">
+                    <div id="win_text" data-win="0"><center>
+                    <h1>เกือบตายแล้วมั้ยเรา<br>ดีนะที่เรายังพอหาของได้</h1><br><br>
+                    <h4>สิ่งของทุกสิ่งที่คุณหาเจอนั้น<br>
+                        ได้ถูกนำมาสร้างเป็นเครื่องกรองอากาศที่ใช้กรองคาร์บอนไดออกไซด์ส่วนเกินภายในยาน<br>
+                        ทำให้เหล่านักบินอวกาศของโครงการอพอลโล่ 13<br>
+                        ที่ติดอยู่ในยานอวากาศหายใจได้และสามารถเดินทางโลกได้อย่างปลอดภัย</h4>
+                        </center>
+                    </div>
+                </div>
+                </div>
+                <div id="next_game3" data-win="0"><center>Continue</center></div>
+                <img src="./game3/lithium_hydroxide_canister_hm.png" id="lhc_hm" data-win="0"></img>
+                <div id="invisible_wall" data-start="0">
+                    <div id="playoff" data-start="0"><center>
+                        <h1>How To Play</h1>
+                        <br>
+                        <h4>หาของที่ซ่อนภายในยานให้ครบ</h4>
+                        <br>
+                    </center>
+                    <button id="start" data-start="0" onclick="startGame3kub()"><center>เริ่มเกม</center></button></div>
+                </div>
+            </div>
+        </div>
+        <script src="./game3/app.js" ></script>
+
+          <!---------------------------------------------------------------->
+          <!-- sence - 1 -->
+          <div class="wrapper" id="sence01">
+            <div class="dialog01" id="sence01">
+              <p>ณ ปี พุทธศักราช 30xx</p>
+            </div>
+            <div class="dialog02" id="sence01">
+              <p>สวัสดี จอร์น!</p>
+            </div>
+            <div class="dialog03" id="sence01">
+              <p>เรามีภารกิจให้นายทำ!</p>
+            </div>
+            <div class="dialog04" id="sence01">
+              <p>ตอนนี้เรากำลังศึกษาดวงจันทร์</p>
+              <p>และต้องการหินตัวอย่างจำนวนหนึ่ง</p>
+              <p>เพื่อนำมาศึกษาต่อ</p>
+            </div>
+            <div class="dialog05" id="sence01">
+              <p>แต่มีคนรายงานพบว่าเจอเอเลี่ยน</p>
+              <p>ให้นายไปเช็คสถานะการที</p>
+            </div>
+            <div class="dialog06" id="sence01">
+              <p>โปรดระวังตัวด้วย!</p>
+            </div>
+            <div class="dialog07" id="sence01">
+              <p>รับทราบครับ!!</p>
+            </div>
+
+            <div class="npc01" id="sence01"></div>
+            <div class="npc02" id="sence01"></div>
+            <div class="cloud-left" id="sence01"></div>
+            <div class="cloud-right" id="sence02"></div>
+
+            <div class="blackscreen"></div>
+          </div>
+          <!-- sence - 2 -->
+          <div class="wrapper sence02-wrapper" id="sence02">
+            <div class="center">
+              <div class="space-ship" id="sence02">
+                <img src="img/char3.png" />
+              </div>
+            </div>
+            <div class="dialog01" id="sence02">
+              <p>เราออกโลกมาแล้ว</p>
+              <p>ไม่เห็นดวงจันทร์ใกล้ๆ</p>
+              <p>ขนาดนี้มาก่อนเลย</p>
+            </div>
+            <div class="dialog02" id="sence02">
+              <p>จะดีไหมนะ?</p>
+              <p>ยานยิ่งไม่ค่อยจะดี</p>
+            </div>
+            <div class="sun" id="sence02"></div>
+            <div class="earth" id="sence02"></div>
+            <div class="orange" id="sence02"></div>
+            <div class="red" id="sence02"></div>
+          </div>
+          <!-- scene - 3 -->
+          <div class="wrapper sence03-wrapper" id="sence03">
+            <div class="dialog01" id="sence03">
+              <p>ว้าว</p>
+              <p>โล่งสุดๆไปอยากอยู่ที่นี้จัง</p>
+            </div>
+            <div class="dialog02" id="sence03">
+              <p>อะ เกือบลืมไปเลย</p>
+              <p>หัวหน้าให้เก็บหินตัวอย่างนี่น่า</p>
+            </div>
+            <div class="dialog03" id="sence03">
+              <p>เอาก้อนนี้แล้วกัน</p>
+            </div>
+            <div class="dialog04" id="sence03">
+              <p>ทันใดนั้นเอง</p>
+            </div>
+            <div class="dialog05" id="sence03">
+              <p>ไม่จริงน่า!!!</p>
+            </div>
+            <div class="dialog06" id="sence03">
+              <p>ถ..ถ..ถึงศูนย์บัญชาการ!</p>
+              <p>มีเอเลี่ยนบนดวงจันทร์</p>
+              <p>ตามรายงานจริงๆด้วยๆ</p>
+            </div>
+            <div class="dialog07" id="sence03">
+              <p>เจ้าจะเอาของข้าไปไหน</p>
+            </div>
+            <div class="dialog08" id="sence03">
+              <p>ถ้าเจ้าอยากได้</p>
+            </div>
+            <div class="dialog09" id="sence03">
+              <p>เจ้าต้องมาเล่นกับข้าก่อน</p>
+            </div>
+            <div class="moon" id="sence03">
+              <div class="center">
+                <div class="moon-stone" id="sence03"></div>
+              </div>
+            </div>
+            <div class="blackscreen" id="sence03"></div>
+            <div class="alian" id="sence03"></div>
+          </div>
+          <!-- scene - 4 -->
+          <div class="wrapper sence04-wrapper" id="sence04">
+            <div class="dialog01" id="sence04">
+              <p>ในเมื่อเจ้าทำภารกิจได้</p>
+              <p>เจ้าก็เอาหินนี้ไปสิ</p>
+            </div>
+            <div class="dialog02" id="sence04">
+              <p>เดินทางกลับดีๆหล่ะ</p>
+              <p>ยานเจ้าดูไม่ค่อยจะดีสักเท่าไร</p>
+            </div>
+            <div class="moon" id="sence04">
+              <div class="center">
+                <div class="moon-stone" id="sence04"></div>
+              </div>
+            </div>
+            <div class="alian" id="sence04"></div>
+          </div>
+          <!-- sencec - 5 -->
+          <div class="wrapper sence05-wrapper" id="sence05">
+            <div class="center">
+              <div class="space-ship" id="sence05">
+                <img src="img/char3.png" />
+              </div>
+            </div>
+            <div class="dialog01" id="sence05">
+              <p>ทำไมหายใจไม่ออกเลย</p>
+              <p>เกิดอะไรขึ้นเนื้ย</p>
+            </div>
+            <div class="dialog02" id="sence05">
+              <p>เหมือนว่าเครื่องผลิตออกซิเจนจะเสียเลย</p>
+              <p>ไม่นะ เพราะยานสภาพไม่ดีแท้ๆ ไม่น่าเลย</p>
+              <p>เราจะมาตายที่นี่หรอ มีอะไรพอใช้ได้ไหมเนี้ยย</p>
+              <p></p>
+            </div>
+            <div class="sun" id="sence02"></div>
+            <div class="earth" id="sence05"></div>
+            <div class="orange" id="sence02"></div>
+            <div class="red" id="sence02"></div>
+          </div>
+          <!-- ----------------- -->
+    <!-- sence - 6 -->
+    <div class="wrapper sence06-wrapper" id="sence06">
+      <div class="center" id="sence06">
+          <div class="space-ship" id="sence06">
+              <img src="img/char3.png">
+          </div>
+      </div>
+      <div class="dialog01" id="sence06">
+          <p>โชคดีที่ยานเราไม่มีปัญหา</p>
+          <p>เชื้อเพลิงในยานหมด</p>
+          <p>เหมือนในเหตุการ์ณ Apollo 13</p>
+      </div>
+      <div class="dialog02" id="sence06">
+          <p>ไม่งั้นเราต้องอาศัย</p>
+          <p>แรงเหวี่ยงของดวงจันทร์</p>
+          <p>ในการกลับโลก</p>
+      </div>
+
+      <div class="dialog03" id="sence06">
+          <p>แต่สงสัยใช่ไหมว่า</p>
+          <p>มีอะไรเกิดขึึ้นกันแน่?</p>
+      </div>
+
+      <div class="sun" id="sence02"></div>
+      <div class="earth" id="sence05"></div>
+      <div class="orange" id="sence02"></div>
+      <div class="red" id="sence02"></div>
+  </div>
         </div>
       </div>
     </game>
-    <div style="background-color:gray; height:500px;">
+    <div style="background-color: gray; height: 500px">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, suscipit?
     </div>
     <script src="./game2/game2.js"></script>
+    <script src="./main.js"></script>
+    <script src="./game1/game1.js"></script>
   </body>
 </html>

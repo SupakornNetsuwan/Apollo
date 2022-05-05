@@ -19,12 +19,12 @@
 
 const allGame = [
   {
-    score: 0,
+    scoreGame5: 0,
     found: 0,
     time: 119,
     img: {
-      real: "./images/game1/real.png",
-      fake: "./images/game1/fake.png",
+      real: "./game5/images/game1/real.png",
+      fake: "./game5/images/game1/fake.png",
     },
     answer: [
       {
@@ -50,12 +50,12 @@ const allGame = [
     ],
   },
   {
-    score: 0,
+    scoreGame5: 0,
     found: 0,
     time: 119,
     img: {
-      real: "./images/game2/real.png",
-      fake: "./images/game2/fake.png",
+      real: "./game5/images/game2/real.png",
+      fake: "./game5/images/game2/fake.png",
     },
     answer: [
       {
@@ -93,7 +93,7 @@ const scoreBoard = game5.querySelector("#score");
 const timeBoard = game5.querySelector("#time");
 const diffBoard = game5.querySelector("#diff");
 
-const playBtn = game5.querySelector("#playBtn");
+const playBtn2 = game5.querySelector("#playBtn-2");
 const realImg = game5.querySelector("#realImg");
 const fakeImg = game5.querySelector("#fakeImg");
 const circle = game5.getElementsByClassName("circle");
@@ -103,12 +103,12 @@ const circle = game5.getElementsByClassName("circle");
 let debug = false;
 
 let nowGame = -1;
-let score = 0;
+let scoreGame5 = 0;
 let found = [];
 let countDown = 0;
 let started = false;
 
-playBtn.addEventListener("click", startGame);
+playBtn2.addEventListener("click", startGame);
 realImg.addEventListener("click", (e) => checkClick(e, realImg));
 fakeImg.addEventListener("click", (e) => checkClick(e, fakeImg));
 // updateBoard();
@@ -135,7 +135,7 @@ function restartGame() {
   gameArea.classList.remove("started");
   for (let i = 0; i < circle.length; i++) circle[i].innerHTML = "";
   nowGame = -1;
-  score = 0;
+  scoreGame5 = 0;
   found = [];
   countDown = 0;
   started = false;
@@ -148,7 +148,7 @@ function updateGame() {
     realImg.src = allGame[nowGame].img.real;
     fakeImg.src = allGame[nowGame].img.fake;
     countDown = allGame[nowGame].time;
-    score = 0;
+    scoreGame5 = 0;
     found = [];
     for (let i = 0; i < circle.length; i++) circle[i].innerHTML = "";
     updateBoard();
@@ -156,7 +156,7 @@ function updateGame() {
 }
 
 function updateBoard() {
-  scoreBoard.innerHTML = `Score: ${score}`;
+  scoreBoard.innerHTML = `Score: ${scoreGame5}`;
   diffBoard.innerHTML = `diff points ${found.length}/${allGame[nowGame].answer.length}`;
   timeBoard.innerHTML = `time: ${pad(Math.floor(countDown / 60))}.${pad(
     countDown % 60
@@ -175,7 +175,7 @@ function counterDown() {
       showDialog(
         true,
         "You lose",
-        score,
+        scoreGame5,
         `${pad(Math.floor(countDown / 60))}.${pad(countDown % 60)}`,
         found.length,
         "Restart",
@@ -221,7 +221,7 @@ function checkClick(e, img) {
         allGame[nowGame].answer[index].p2.y) /
       2;
 
-    score += Math.ceil(allGame[nowGame].answer[index].point + (countDown / 10 * allGame[nowGame].answer[index].point));
+    scoreGame5 += Math.ceil(allGame[nowGame].answer[index].point + (countDown / 10 * allGame[nowGame].answer[index].point));
     found.push(allGame[nowGame].answer[index]);
 
     for (let i = 0; i < circle.length; i++) {
@@ -239,7 +239,7 @@ function checkClick(e, img) {
         showDialog(
           true,
           "You win",
-          score,
+          scoreGame5,
           `${pad(Math.floor(countDown / 60))}.${pad(countDown % 60)}`,
           found.length,
           nowGame + 1 < allGame.length ? "Next" : "End",

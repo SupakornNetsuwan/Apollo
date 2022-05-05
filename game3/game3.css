@@ -1,12 +1,15 @@
-body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, #050512, #050512), linear-gradient(0deg, #040311, #040311), #020411;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    user-select: none;
+#game-3{
+    display:none;
+    background-color:black;
+}
 
+.bg-game-3{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:black;
 }
 
 #game-3 #deco1 {
@@ -125,12 +128,11 @@ body {
     height: 720px;
     left: calc(50% - 640px);
     top: calc(50% - 360px);
-    background: url(background.png);
+    background: url("background.png");
     background-size: cover;
     border-radius: 34px;
     box-shadow: 0px 0px 10px #000000;
     overflow: hidden;
-    z-index: 999;
 }
 
 #game-3 #hint_bar {
@@ -323,9 +325,9 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*ปุ่ม  next <----------------------------------------- I'm on the next level yeah*/
+/*ปุ่ม  next_game3-game3 <----------------------------------------- I'm on the next_game3-game3 level yeah*/
 
-#game-3 #next {
+#game-3 #next_game3 {
     position: absolute;
     right: 20%;
     bottom: 20%;
@@ -344,7 +346,7 @@ body {
     opacity: 0;
 }
 
-#game-3 #next[data-win="1"] {
+#game-3 #next_game3[data-win="1"] {
     text-align: center;
     line-height: 59px;
     width: 205px;
@@ -363,12 +365,12 @@ body {
     opacity: 1;
 }
 
-#game-3 #next:hover {
+#game-3 #next_game3:hover {
     background-color: hsl(30, 100%, 70%);
     transition: .3s;
 }
 
-#game-3 #next:active {
+#game-3 #next_game3:active {
     transform: translateY(5px);
     box-shadow: none;
     transition: .3s;
@@ -455,7 +457,7 @@ body {
     animation: box_mix 2s;
 }
 
-#game-3 #card[data-find="2"] {
+#game-3 #card-dup[data-find="2"] {
     position: absolute;
     width: 100px;
     height: 30px;
@@ -593,7 +595,7 @@ body {
     width: 100px;
 }
 
-#game-3 #card[data-find="0"] {
+#game-3 #card-dup[data-find="0"] {
     position: absolute;
     width: 100px;
     height: 30px;
@@ -618,7 +620,7 @@ body {
     }
 }
 
-#game-3 #card[data-find="1"] {
+#game-3 #card-dup[data-find="1"] {
     position: absolute;
     width: 100px;
     height: 30px;
