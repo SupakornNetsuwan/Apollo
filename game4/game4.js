@@ -254,7 +254,7 @@ function end(){
         imageObj.onload = function() {
             context.drawImage(imageObj, 260, -40,);
         };
-        imageObj.src = 'spaceman.png';
+        imageObj.src = './game4/spaceman.png';
         setTimeout(function(){
             document.getElementsByClassName("showpoint")[0].innerHTML = point;
     
