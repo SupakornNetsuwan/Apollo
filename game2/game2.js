@@ -26,6 +26,9 @@ startgame.addEventListener("click", () => {
     if(finishEntireGame === true){
         const finishEntireGameDialog = document.getElementsByClassName("finish-entire-game")[0];
         finishEntireGameDialog.style.display = "flex";
+        setTimeout(() => {
+            window.location.href = "/Landingfinal.html";
+        },3500)
     }
 
     finishEntireGame = true;
