@@ -471,6 +471,60 @@
         font-size: .8rem;
       }
     }
+
+    .footer{
+      padding: 2em 3em;
+      background-color: #474747;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      position:relative;
+      z-index: 100;
+    }
+
+    .footer div:nth-child(1){
+      display:flex;
+      align-items: center;
+    }
+
+    .footer div:nth-child(2){
+      color:white;
+      width:100%;
+      margin:0 0 0 2em;
+      display:flex;
+      flex-direction:column;
+      align-items: end;
+    }
+    
+    .footer div:nth-child(1) img{
+      border-radius: 12px;
+    }
+
+    .footer div:nth-child(1) img[alt="spaceth"]{
+      width:6em;
+      padding:1em;
+      background-color:white;
+    }
+
+    .footer div:nth-child(1) img[alt="itkmitl"]{
+      width:6em;
+      margin:0 0 0 1em;
+      background-color:white;
+      padding:1em;
+      
+    }
+
+    .footer div:nth-child(2) p:nth-child(1){
+      color:rgb(207, 207, 207);  
+      text-align: right;
+    }
+
+    .footer div:nth-child(2) p:nth-child(2){
+      max-width:600px;
+      font-size: 0.8em;
+      text-align: right;
+    }
+
   </style>
 </head>
 
@@ -1096,6 +1150,23 @@
     </section>
     </div>
   </div>
+  </div>
+  <div class="footer">
+    <div>
+      <img src="https://scontent.fbkk9-2.fna.fbcdn.net/v/t31.18172-8/19477640_437299593321206_1241329941287941983_o.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFlmwrkbeAJ9sJuHgNwxff0QOWO2CgyA2dA5Y7YKDIDZxvtC-3v1K8KPH2N9LWiXqWQZ6Qg9snSrGKKz6lOx4eZ&_nc_ohc=s7mrl5Su19sAX9ocOXe&_nc_ht=scontent.fbkk9-2.fna&oh=00_AT8W16YdzBO6zESyDxa7hb3TrEuRkfXdX7MggXTiyINPdQ&oe=62B114C3" alt="spaceth" />
+      <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/it-logo.png" alt="itkmitl"  />
+    </div>
+    <div>
+      <p>
+        <b>Teacher & Teacher assistant</b><br/>
+  1. Dr. Supawan Thadsanaprasert<br/>
+  2. Pimwaree Kromsuriyasak<br/>
+      </p>
+      <p>
+        เว็บไซต์นี้คือส่วนหนึ่งของโครงการความร่วมมือของรายวิชา Multimedia Technology คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ร่วมกับ spaceth.co สื่อออนไลน์ด้านอวกาศ การสำรวจอวกาศ ทั้งในไทยและต่างประเทศ ที่ต้องการพาให้อวกาศเข้ามาใกล้ชิดกับชีวิตประจำวันของพวกเรา
+      </p>
+    </div>
+
   </div>
   <script>
     const rocket = document.getElementById("rkImg")
