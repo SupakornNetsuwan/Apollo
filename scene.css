@@ -343,8 +343,9 @@
 #sence02.sun {
   position: absolute;
   background-image: url("img/Sun.png");
+  
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 70%;
   width: 40%;
   top: -30%;
