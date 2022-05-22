@@ -10,6 +10,19 @@ var stop;
 
 
 function create_fire() {
+  if(score >= 4){
+    document.querySelector(".endgame").style.display = "block";
+    const fireGameDialog = document.getElementById("fire-game");
+    const fireGameDialogHead = document.getElementById("fire-game");
+    fireGameDialogHead.innerHTML = "สำเร็จ!"
+    fireGameDialog.innerHTML = `
+    <h2>ในที่สุดก็ดับไฟเสร็จแล้ว </h2><br/>
+      โชคดีนะที่พวกนายดับไฟได้ แต่พอดีว่าในวันที่ 27 มกราคม 1967 ไม่ได้โชคดีอย่างพวกนายน่ะสิ ในอพอลโล 1<br/>
+      ที่มีเหตุไฟไหม้เพราะภายในยานมีวัตถุไวไฟจำนวนมากรวมกับ  การใช้ออกซิเจนบริสุทธิ์ ทำให้ลูกเรือทั้งสามได้ดับชีวิตลง`
+      clearInterval(stop);
+    return;
+  }
+
   if (fire_count >= max_fire) {
     clearInterval(stop);
     document.querySelector(".endgame").style.display = "block";
