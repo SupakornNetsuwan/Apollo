@@ -1,24 +1,39 @@
-#landing.container{
-    background: linear-gradient(90deg, rgb(23, 23, 23), rgba(66, 64, 67, 1));
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
+
 #landing .bt-container{
-    max-width: 250px;
-    width: 100%;
-    height: 150px;
-    background-color: rgba(170, 163, 163, 0.5);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(143, 129, 9);
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transition: 0.2s all;
+    z-index:100;
+    overflow: hidden;
 }
+
+
+#landing .bt-container a{
+    padding:15px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+#landing .bt-container .to-landing-button{
+    position: absolute;
+    top:0;  
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgb(230, 209, 24);
+    transform: translate(0, -5px);
+    z-index: 2;
+}
+
 #landing .bt-container:hover {
-    background-color: rgba(165, 158, 158, 0.5);
+    background-color: rgb(209, 190, 19);
     transform: scale(0.97);
 }
 #landing a{
@@ -26,21 +41,20 @@
     text-decoration: none;
 }
 #landing .bt{
-    width: 70px;
-    height: 70px;
+    padding:8px;
     background: linear-gradient(135deg, #171717, #444245);
     border-radius: 50%;
     border: 2px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
 #landing .bt i{
     color: #FFD43B;
     font-size: 40px;
 }
 #landing .bt-text{
-    margin-top: 8px;
-    color: aliceblue;
+    color: black;
+    margin:0 0 0 20px;
 }
