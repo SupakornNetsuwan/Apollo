@@ -23,37 +23,6 @@ const allGame = [
     found: 0,
     time: 119,
     img: {
-      real: "./game5/images/game1/real.png",
-      fake: "./game5/images/game1/fake.png",
-    },
-    answer: [
-      {
-        p1: { x: 33.94683026584867, y: 31.901840490797547 },
-        p2: { x: 40.081799591002046, y: 37.83231083844581 },
-        point: 25,
-      },
-      {
-        p1: { x: 71.57464212678937, y: 39.87730061349693 },
-        p2: { x: 74.23312883435584, y: 42.12678936605317 },
-        point: 50,
-      },
-      {
-        p1: { x: 53.78323108384458, y: 48.466257668711656 },
-        p2: { x: 62.372188139059304, y: 57.873210633946826 },
-        point: 25,
-      },
-      {
-        p1: { x: 50.10224948875256, y: 73.21063394683026 },
-        p2: { x: 41.922290388548056, y: 66.46216768916156 },
-        point: 40,
-      },
-    ],
-  },
-  {
-    scoreGame5: 0,
-    found: 0,
-    time: 119,
-    img: {
       real: "./game5/images/game2/real.png",
       fake: "./game5/images/game2/fake.png",
     },
@@ -77,6 +46,37 @@ const allGame = [
         p1: { x: 60.60606060606061, y: 87.07070707070706 },
         p2: { x: 64.84848484848484, y: 92.52525252525253 },
         point: 70,
+      },
+    ],
+  },
+  {
+    scoreGame5: 0,
+    found: 0,
+    time: 119,
+    img: {
+      real: "./game5/images/game1/real.png",
+      fake: "./game5/images/game1/fake.png",
+    },
+    answer: [
+      {
+        p1: { x: 33.94683026584867, y: 31.901840490797547 },
+        p2: { x: 40.081799591002046, y: 37.83231083844581 },
+        point: 25,
+      },
+      {
+        p1: { x: 71.57464212678937, y: 39.87730061349693 },
+        p2: { x: 74.23312883435584, y: 42.12678936605317 },
+        point: 50,
+      },
+      {
+        p1: { x: 53.78323108384458, y: 48.466257668711656 },
+        p2: { x: 62.372188139059304, y: 57.873210633946826 },
+        point: 25,
+      },
+      {
+        p1: { x: 50.10224948875256, y: 73.21063394683026 },
+        p2: { x: 41.922290388548056, y: 66.46216768916156 },
+        point: 40,
       },
     ],
   },
@@ -221,7 +221,10 @@ function checkClick(e, img) {
         allGame[nowGame].answer[index].p2.y) /
       2;
 
-    scoreGame5 += Math.ceil(allGame[nowGame].answer[index].point + (countDown / 10 * allGame[nowGame].answer[index].point));
+    scoreGame5 += Math.ceil(
+      allGame[nowGame].answer[index].point +
+        (countDown / 10) * allGame[nowGame].answer[index].point
+    );
     found.push(allGame[nowGame].answer[index]);
 
     for (let i = 0; i < circle.length; i++) {
