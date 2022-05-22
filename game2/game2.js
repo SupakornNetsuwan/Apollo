@@ -13,7 +13,7 @@ let position = {
     y: -100
 }
 
-let availableFuel = 300
+let availableFuel = 140
 
 const startgame = document.getElementById("playBtn-game2");
 const dialogGame2 = document.getElementsByClassName("goUp-game-2")[0];
