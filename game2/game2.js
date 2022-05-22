@@ -13,7 +13,7 @@ let position = {
     y: -100
 }
 
-let availableFuel = 140
+let availableFuel = 300
 
 const startgame = document.getElementById("playBtn-game2");
 const dialogGame2 = document.getElementsByClassName("goUp-game-2")[0];
@@ -59,7 +59,7 @@ const checkVictory = ({ x, y }) => {
     //Test for victory position
     // const victoryPlanet = document.getElementsByClassName("victory-planet")[0];
 
-    if ((x >= 1050 && x <= 1350) && (y <= -450 && y >= -650)) {
+    if ((x >= 1050 && x <= 1650) && (y <= -250 && y >= -850)) {
 
         dialogGame2.style.display = "flex";
         dialogGame2Detail.innerHTML = `เก่งมาก! คุณกลับมายังโลกได้สำเร็จ <br>
