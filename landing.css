@@ -15,7 +15,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    transition: 0.2s all;
+}
+#landing .bt-container:hover {
+    background-color: rgba(165, 158, 158, 0.5);
+    transform: scale(0.97);
 }
 #landing a{
     list-style: none;
@@ -30,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 #landing .bt i{
     color: #FFD43B;
