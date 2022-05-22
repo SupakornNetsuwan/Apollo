@@ -61,11 +61,11 @@ game {
   left:0;
   width:100%;
   height:100%;
-  background-color:rgb(219, 204, 63);
   justify-content:center;
   align-items:center;
   font-size:3em;
   z-index: 1000;
-  color:black;
+  color:white;
   display:none;
+  background-image:url("https://jogalappal.hu/wp-content/uploads/2019/12/Space-Force-800x400.jpg");
 }
