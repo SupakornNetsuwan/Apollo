@@ -65,7 +65,7 @@ const checkVictory = ({ x, y }) => {
         dialogGame2Detail.innerHTML = `เก่งมาก! คุณกลับมายังโลกได้สำเร็จ <br>
         รู้ไหมว่าตอนอพอลโล 13 ก็ได้เกิดอุบัติเหตุขึ้น คือถังออกซิเจนเกิดระเบิดขึ้นมา แต่ตัวยานนั้นอยู่ห่างจากโลกเกินกว่าจะกลับได้ พวกเขาเลยใช้วิธี Free-return trajectory ซึ่งก็คือการใช้แรงดึงดูดของดวงจันทร์เหวี่ยงยานกลับสู่โลก การศึกษาเรื่องเก่าๆไว้ก็ดีเหมือนกัน? ว่างๆ ระหว่างกลับโลกก็มาศึกษากันเถอะ
         `;
-        const titleGame2 = document.getElemenstByClassName("title-game2")[0];
+        const titleGame2 = document.getElementsByClassName("title-game2")[0];
         titleGame2.innerHTML = "ภารกิจสำเร็จ"
         //Play next level!
     }
