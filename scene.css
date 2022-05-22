@@ -902,3 +902,7 @@
   width: 100%;
   transform: scaleY(-1);
 }
+
+.big-font{
+  font-size:1.5em;
+}

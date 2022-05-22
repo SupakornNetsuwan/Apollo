@@ -13,7 +13,7 @@ function create_fire() {
   if(score >= 50){
     document.querySelector(".endgame").style.display = "block";
     const fireGameDialog = document.getElementById("fire-game");
-    const fireGameDialogHead = document.getElementById("fire-game");
+    const fireGameDialogHead = document.getElementById("fire-game-head");
     fireGameDialogHead.innerHTML = "สำเร็จ!"
     fireGameDialog.innerHTML = `
     <h2>ในที่สุดก็ดับไฟเสร็จแล้ว </h2><br/>
