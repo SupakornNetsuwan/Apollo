@@ -10,7 +10,7 @@ var stop;
 
 
 function create_fire() {
-  if(score >= 4){
+  if(score >= 50){
     document.querySelector(".endgame").style.display = "block";
     const fireGameDialog = document.getElementById("fire-game");
     const fireGameDialogHead = document.getElementById("fire-game");
