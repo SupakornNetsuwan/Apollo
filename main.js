@@ -15,6 +15,7 @@ setTimeout(() => {
 }, 35000)
 
 const game1Countinue = document.getElementsByClassName("game-1-continue")[0];
+const sence03 = document.getElementsByClassName("sence03-wrapper")[0];
 game1Countinue.addEventListener("click", () => {
     const sence02 = document.getElementsByClassName("sence02-wrapper")[0];
     sence02.style.zIndex = 100;
@@ -25,28 +26,37 @@ game1Countinue.addEventListener("click", () => {
         game1.style.display = "none";
         sence02.style.display = "none";
 
-        const game4 = document.getElementById("game-4");
-        game4.style.display = "block";
-        game4.style.zIndex = 200;
+        // const game4 = document.getElementById("game-4");
+        // game4.style.display = "block";
+        // game4.style.zIndex = 200;
+
+        sence03.style.display = "block"
+        sence03.style.zIndex = 100;
+        console.log("Going for game3");
+        setTimeout(() => {
+            startGameNo3()
+        }, 51000)
+        //Now everything has hidden.
     }, 5000)
 })
 
-const game4Done = document.getElementsByClassName("game-4-done")[0];
-const sence03 = document.getElementsByClassName("sence03-wrapper")[0];
-game4Done.addEventListener("click", () => {
-    const game4 = document.getElementById("game-4");
-    game4.style.display = "none";
+// const game4Done = document.getElementsByClassName("game-4-done")[0];
+// // const sence03 = document.getElementsByClassName("sence03-wrapper")[0];
+// game4Done.addEventListener("click", () => {
+//     const game4 = document.getElementById("game-4");
+//     game4.style.display = "none";
 
-    sence03.style.display = "block"
-    sence03.style.zIndex = 100;
-    console.log("Going for game3");
-    let time = 0;
+//     sence03.style.display = "block"
+//     sence03.style.zIndex = 100;
+//     console.log("Going for game3");
+//     let time = 0;
 
-    setTimeout(() => {
-        startGameNo3()
-    }, 51000)
-    //Now everything has hidden.
-})
+//     // setTimeout(() => {
+//     //     startGameNo3()
+//     // }, 51000)
+//     //Now everything has hidden.
+// })
+
 const game5Wrapper = document.getElementById("game-5");
 const startGameNo3 = () => {
     console.log("START FINDING DIFF SPOT GAME.")

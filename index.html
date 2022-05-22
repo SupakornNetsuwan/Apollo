@@ -54,7 +54,7 @@
               </p>
             </div>
             <div class="start">
-              <h3 style="text-decoration: underline">Game #1</h3>
+              <h3 style="text-decoration: underline">Mission #1</h3>
               <p>
                 จรวดกำลังจะถูกไฟเผา คุณจะช่วยภารกิจนี้ไว้ได้หรือไม่
                 คลิกเมาส์เพื่อดับไฟ
@@ -62,12 +62,12 @@
               <div class="startbtn" onclick="start(this);">Start</div>
             </div>
             <div class="endgame">
-              <h3>Gameover!</h3>
-              <p>
+              <h3 id="fire-game-head">Gameover!</h3>
+              <p id="fire-game" style="margin:20px 0 20px 0">
                 คุณทำได้ดีที่สุดแล้ว แต่ก็ยังไม่สามารถช่วยภารกิจไว้ได้
                 เหมือนในวันที่ 27 มกราคม 1967 ในอพอลโล1
                 ที่มีเหตุไฟไหม้เพราะภายในยานมีวัตถุไวไฟจำนวนมากรวมกับ
-                การใช้เพียงออกซิเจน ทำให้ลูกเรือทั้งสามได้ดับชีวิตลง
+                การใช้ออกซิเจนบริสุทธิ์ ทำให้ลูกเรือทั้งสามได้ดับชีวิตลง
               </p>
               <div
                 style="
@@ -76,7 +76,7 @@
                   justify-content: center;
                 "
               >
-                <div class="restart" onclick="restart()">Restart?</div>
+                <div class="restart" onclick="restart()">Restart</div>
                 <div class="game-1-continue continue">Continue</div>
               </div>
             </div>
@@ -155,158 +155,7 @@
               </div>
             </div>
           </div>
-
-          <!-- Game 4 -->
-          <div id="game-4">
-            <wrapper class="game-4-wrapper">
-              <div class="super-parent">
-                <div class="modalstart">
-                  <div class="startgameModal">
-                    <div id="title">How to play<br /><br /></div>
-                    <div id="detail">
-                      ส่งกำลังใจไปให้เหล่านักบินอวกาศ<br /><br />
-                      โดยการคลิกเมาส์ของคุณลากไปตามจุด
-                    </div>
-                    <button class="start start-game-4 playBtn">NEXT</button>
-                  </div>
-                </div>
-                <div class="modaloption">
-                  <div class="optionpage">
-                    <div id="title">ITEM</div>
-                    <!-- <svg class="item" xmlns="http://www.w3.org/2000/svg" width="50" height="50"  viewBox="0 0 20 20">
-                            <path fill="white" fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
-                            <path fill="white" d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
-                        </svg> -->
-                        <div id="detail">
-                          กดไอคอน ? เพื่อเปิดเฉลยตัวเลขให้ดูเป็นเวลา 3 วิ
-                      </div>
-                      <div id="detail">
-                          X2 คะแนนคูณ 2(STREAKS)
-                      </div>
-                      <div id="detail">
-                          กดไอคอนหมุนเพื่อ RESET เวลา
-                      </div>
-                      <button class="optionbutton playBtn">PLAY</button>
-                  </div>
-                </div>
-                <div class="modalnext">
-                  <div class="modalnextstage">
-                    <button class="next playBtn">Next</button>
-                  </div>
-                </div>
-                <div class="modalend">
-                  <div class="endgameModal">
-                    <div id="title">ยินดีด้วยคุณถึงดวงจันทร์แล้ว 🎉<br /></div>
-                    <div id="detail">
-                      รู้หรือไม่ในวันที่ 20 กรกฎาคม 1969 นีล อาร์มสตรองหน่ะ<br />
-                      เป็นคนแรกของโลกที่ไปเหยียบดวงจันทร์กลุ่มแรก <br />
-                      และเขายังไปปักธงของชาติอเมริกาเพื่อว่า<br />
-                      ชาวอเมริกาเป็นชาติแรกที่ไปเหยียบดวงจันทร์ได้
-                    </div>
-                    <button class="continue playBtn game-4-done">
-                      Continue
-                    </button>
-                    <div id="youpoint">แต้มของคุณ :</div>
-                    <div class="showpoint"></div>
-                  </div>
-                </div>
-
-                <div class="modalLose">
-                  <div class="Lose2">
-                    <div id="title">คุณแพ้</div>
-                    <button class="lose playBtn">Retry</button>
-                  </div>
-                </div>
-                <div class="frame1">
-                  <div class="gamePoint">
-                    <div class="round">
-                      <div id="stageNum"></div>
-                    </div>
-                    <div class="frameGamedot">
-                      <canvas class="game-dots"></canvas>
-                    </div>
-
-                    <script
-                      type="text/javascript"
-                      src="./game4/game4.js"
-                    ></script>
-                  </div>
-                  <div class="board">
-                    <div class="steaks">
-                      <img src="./game4/fire.png" alt="" class="steaksFire" />
-                      <div class="captionFire">STREAKS</div>
-                      <div class="steaks_click"></div>
-                    </div>
-                    <div class="option">
-                      <div class="life">
-                        <span class="life1">X </span>
-                        <span class="life2">X </span>
-                        <span class="life3">X</span>
-                      </div>
-                      <div class="circleTime">
-                        <div class="pie name"></div>
-                      </div>
-                      <div class="time-display"></div>
-                      <div class="helper">
-                        <div class="circletimeblock"></div>
-                        <div class="circlex2"></div>
-                        <div class="circleanswer"></div>
-                        <button onclick="answer()" class="answer fontheleper">
-                          ?
-                        </button>
-                        <button
-                          onclick="x2(), hideX2()"
-                          id="X2"
-                          class="x2point x2font"
-                        >
-                          X2
-                        </button>
-                        <button onclick="restartTime()" class="turnback">
-                          <svg
-                            class="iconturnback"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="55"
-                            height="55"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fill="white"
-                              fill-rule="evenodd"
-                              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
-                            />
-                            <path
-                              fill="white"
-                              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="retry">
-                      <button onclick="restart()" class="svgbutton">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="80"
-                          height="80"
-                          fill="white"
-                          class="bibi-arrow-repeat"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </wrapper>
-          </div>
+          
           <!-- Game 5 -->
           <div
             id="game-5"
@@ -458,7 +307,7 @@
           <!-- sence - 1 -->
           <div class="wrapper" id="sence01">
             <div class="dialog01" id="sence01">
-              <p>ณ ปี พุทธศักราช 30xx</p>
+              <p>ณ ปี พุทธศักราช 6969</p>
             </div>
             <div class="dialog02" id="sence01">
               <p>สวัสดี จอร์น!</p>
@@ -473,7 +322,7 @@
             </div>
             <div class="dialog05" id="sence01">
               <p>แต่มีคนรายงานพบว่าเจอเอเลี่ยน</p>
-              <p>ให้นายไปเช็คสถานะการที</p>
+              <p>ให้นายไปเช็คสถานการณ์ที</p>
             </div>
             <div class="dialog06" id="sence01">
               <p>โปรดระวังตัวด้วย!</p>
