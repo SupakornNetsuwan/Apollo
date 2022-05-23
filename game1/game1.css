@@ -11,29 +11,32 @@
     top: calc(50% - 7em);
     left: 25%;
     width: 50%;
-    background: white;
-    border: 5px solid black;
+    background: rgba(200, 200, 200, .9);
+    box-shadow: -3px -3px 0px white;
     padding: 1em;
     z-index: 1000;
     text-align:center;
     display: block;
+    border-radius: 25px;
   }
   
   .game-1 .startbtn{
     margin:auto;
-    background: white;
-    border: 5px solid black;
+    background: hsl(251, 20%, 20%);
     padding: 0.5em;
     transition: 0.5s;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
   }
   
   .game-1 .startbtn:hover{
-    background:lightyellow;
+    background:hsl(251, 30%, 40%);
   }
   
   .game-1 .helpbox{
-    background: white;
-    border: 5px solid black;
+    background: rgba(200, 200, 200, .9);
+    box-shadow: -3px -3px 0px white;
     padding: 0.5em;
     position:absolute;
     z-index: 5000;
@@ -42,6 +45,7 @@
     display: none;
     transition: 0.5s;
     max-width: 50%;
+    border-radius: 10px;
   }
   
   .game-1 .rocketbox{
@@ -54,15 +58,17 @@
   .game-1 .controls{
     position:absolute;
     height:15%;
-    width:100%;
+    width: 98%;
     top:0;
-    background: #2e305f;
+    background: rgba(255, 255, 255, 0.25);
     z-index: 30;
     display: inline-flex;
+    margin: 1%;
+    border-radius: 25px;
   }
   
   .game-1 .controls > div{
-    background:white;
+    background:rgba(200, 200, 200, 1);
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5%;
@@ -71,13 +77,22 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    border: 5px solid black;
+    border: 2px solid black;
     font-size: 1.5rem;
   }
   
   .game-1 .help{
     border-radius: 50%;
     transition: 0.5s;
+    width: 1.25em;
+  }
+
+  .game-1 .controls > div:nth-child(2){
+    border-radius: 10px;
+  }
+
+  .game-1 .controls > div:nth-child(3){
+    border-radius: 10px;
   }
   
   .game-1 .help:hover{
@@ -86,14 +101,13 @@
   
   .game-1 .continue{
     margin:auto;
-    background: white;
-    border: 5px solid black;
+    background: hsl(251, 20%, 20%);
+    border-radius: 10px;
+    color: white;
     padding: 0.5em;
     transition: 0.5s;
-  }
-  
-  .game-1 .gameover:hover{
-    background: lightyellow;
+    color: white;
+    width: 25%;
   }
   
   .game-1 .endgame{
@@ -101,28 +115,31 @@
     top: calc(50% - 7em);
     left: 25%;
     width: 50%;
-    background: white;
-    border: 5px solid black;
+    background: rgba(200, 200, 200, .9);
+    box-shadow: -3px -3px 0px white;
     padding: 1em;
     z-index: 1000;
     text-align:center;
     display: none;
+    border-radius: 25px;
   }
   
   .game-1 .restart{
     margin:auto;
-    background: white;
-    border: 5px solid black;
+    background: hsl(251, 20%, 20%);
+    border-radius: 10px;
+    color: white;
     padding: 0.5em;
     transition: 0.5s;
+    width: 25%;
   }
   
   .game-1 .restart:hover{
-    background:lightyellow;
+    background:hsl(251, 30%, 40%);
   }
   
   .game-1 .continue:hover{
-    background:lightyellow;
+    background:hsl(251, 30%, 40%);
   }
   
   
