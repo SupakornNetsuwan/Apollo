@@ -1,6 +1,7 @@
 #game-3{
     display:none;
     background-color:black;
+    user-select: none;
 }
 
 .bg-game-3{
@@ -133,6 +134,7 @@
     border-radius: 34px;
     box-shadow: 0px 0px 10px #000000;
     overflow: hidden;
+    z-index: 999;
 }
 
 #game-3 #hint_bar {
@@ -342,7 +344,7 @@
     border: none;
     box-shadow: 0px 5px 1px #00000066;
     cursor: pointer;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
 }
 
