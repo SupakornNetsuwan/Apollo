@@ -134,7 +134,7 @@
     border-radius: 34px;
     box-shadow: 0px 0px 10px #000000;
     overflow: hidden;
-    z-index: 999;
+    z-index: 1;
 }
 
 #game-3 #hint_bar {
