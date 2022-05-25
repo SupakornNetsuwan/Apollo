@@ -574,9 +574,9 @@
 </head>
 
 <body onscroll="rotateRocket()" id="landing">
-  <!-- <div id="rocket">
+  <div id="rocket">
     <img id="rkImg" src="https://cdn.discordapp.com/attachments/872285420862459946/967418032152522802/unknown.png" alt="">
-  </div> -->
+  </div>
   <div class="landing-container">
     <section class="landing-page" id="landing-page1">
 
@@ -1243,23 +1243,23 @@
 
   </div>
   <script>
-    // const rocket = document.getElementById("rkImg")
-    // function rotateRocket() {
-    //   let winScreen = 101.9771071800208 * window.innerHeight / 100
-    //   console.log(window.innerHeight)
-    //   let value = document.documentElement.scrollTop
-    //   let section = Math.floor(value / winScreen)
-    //   let scroll = (value % winScreen) / winScreen
-    //   let move = scroll * 60
-    //   let rotate = scroll * 90
-    //   if (section % 2 == 0) {
-    //     rocket.style.left = `calc(10% + ${move}%)`
-    //     rocket.style.transform = `rotateZ(calc(135deg + ${rotate}deg))`
-    //   } else {
-    //     rocket.style.left = `calc(70% - ${move}%)`
-    //     rocket.style.transform = `rotateZ(calc(225deg - ${rotate}deg))`
-    //   }
-    // }
+    const rocket = document.getElementById("rkImg")
+    function rotateRocket() {
+      let winScreen = 101.9771071800208 * window.innerHeight / 100
+      console.log(window.innerHeight)
+      let value = document.documentElement.scrollTop
+      let section = Math.floor(value / winScreen)
+      let scroll = (value % winScreen) / winScreen
+      let move = scroll * 60
+      let rotate = scroll * 90
+      if (section % 2 == 0) {
+        rocket.style.left = `calc(10% + ${move}%)`
+        rocket.style.transform = `rotateZ(calc(135deg + ${rotate}deg))`
+      } else {
+        rocket.style.left = `calc(70% - ${move}%)`
+        rocket.style.transform = `rotateZ(calc(225deg - ${rotate}deg))`
+      }
+    }
     let allbutpage1 = document.querySelector("#landing-page1").querySelectorAll(".landing-content-button-buttom-info")
     allconpage1 = document.querySelector("#landing-page1").querySelectorAll(".landing-content-container-page")
     allbutpage2 = document.querySelector("#landing-page2").querySelectorAll(".landing-content-button-buttom-info")
